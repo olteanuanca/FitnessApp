@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13682A86-4C5F-4EC5-BB2A-2740CB9CA74E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FitnessApplication</RootNamespace>
+    <AssemblyName>FitnessApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Account.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCredential.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Cardio.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Friends.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Meals.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Notification.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Recipes.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Reminder.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Strength.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddFriends.xaml.cs" />
+    <Compile Include="AuthentificationWindow.xaml.cs" />
+    <Compile Include="BreakfastGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cardio.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordWindow.xaml.cs" />
+    <Compile Include="Diary.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryBreakfast.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryCardio.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryDinner.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryEntry.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryLunch.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryNote.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiarySnack1.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiarySnack2.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryStrength.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryWater.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DinnerGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessAppModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordWindow.xaml.cs" />
+    <Compile Include="Friend.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FriendMessage.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FriendMessages.xaml.cs" />
+    <Compile Include="FriendRequest.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FriendRequests.xaml.cs" />
+    <Compile Include="FriendsList.xaml.cs">
+      <DependentUpon>FriendsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FriendsMenuWindow.xaml.cs" />
+    <Compile Include="Goal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageWindow.xaml.cs" />
+    <Compile Include="Ingredient.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LunchGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MealGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyCardio.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyMeal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyRecipe.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyStrength.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewAccountWindow1.xaml.cs" />
+    <Compile Include="NewAccountWindow2.xaml.cs" />
+    <Compile Include="NewAccountWindow3.xaml.cs" />
+    <Compile Include="Notification.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NutritionGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reminder.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Snack1Goals.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Snack2Goals.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Strength.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WeightGoal.cs">
+      <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Page Include="AddFriends.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AuthentificationWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChangePasswordWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ForgotPasswordWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FriendMessages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FriendRequests.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FriendsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FriendsMenuWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomePageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FitnessAppModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessAppModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessAppModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessAppModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewAccountWindow1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewAccountWindow2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewAccountWindow3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="FitnessAppModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FitnessAppModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FitnessAppModel.edmx.diagram">
+      <DependentUpon>FitnessAppModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Account.datasource" />
+    <None Include="Properties\DataSources\FriendMessage.datasource" />
+    <None Include="Properties\DataSources\FriendRequest.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FitnessAppModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FitnessAppModel.Context.cs</LastGenOutput>
+      <DependentUpon>FitnessAppModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="FitnessAppModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FitnessAppModel.edmx</DependentUpon>
+      <LastGenOutput>FitnessAppModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Windows\Forms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

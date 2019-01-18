@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyFitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AccountCredential">
+    <Key>
+      <PropertyRef Name="id_AccCredentials" />
+    </Key>
+    <Property Name="id_AccCredentials" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccUsername" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK__Accounts__id_Acc__382F5661" FromRole="AccountCredentials" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="id_Account" />
+    </Key>
+    <Property Name="id_Account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Double" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_Account_Diary" Type="Int32" Nullable="false" />
+    <Property Name="id_Account_Goals" Type="Int32" Nullable="false" />
+    <Property Name="id_Account_AccountCredentials" Type="Int32" Nullable="false" />
+    <Property Name="id_Account_Progress" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AccountCredential" Relationship="Self.FK__Accounts__id_Acc__382F5661" FromRole="Accounts" ToRole="AccountCredentials" />
+    <NavigationProperty Name="Accounts_Notification" Relationship="Self.FK__Accounts___id_Ac__3BFFE745" FromRole="Accounts" ToRole="Accounts_Notification" />
+    <NavigationProperty Name="Accounts_Reminder" Relationship="Self.FK__Accounts___id_Ac__3FD07829" FromRole="Accounts" ToRole="Accounts_Reminder" />
+    <NavigationProperty Name="Accounts_Friends" Relationship="Self.FK__Accounts___id_Ac__43A1090D" FromRole="Accounts" ToRole="Accounts_Friends" />
+    <NavigationProperty Name="Accounts_Meals" Relationship="Self.FK__Accounts___id_Ac__477199F1" FromRole="Accounts" ToRole="Accounts_Meals" />
+    <NavigationProperty Name="Accounts_Recipes" Relationship="Self.FK__Accounts___id_Ac__4B422AD5" FromRole="Accounts" ToRole="Accounts_Recipes" />
+    <NavigationProperty Name="Accounts_Cardio" Relationship="Self.FK__Accounts___id_Ac__4F12BBB9" FromRole="Accounts" ToRole="Accounts_Cardio" />
+    <NavigationProperty Name="Accounts_Strength" Relationship="Self.FK__Accounts___id_Ac__52E34C9D" FromRole="Accounts" ToRole="Accounts_Strength" />
+    <NavigationProperty Name="Diary" Relationship="Self.FK__Accounts__id_Acc__36470DEF" FromRole="Accounts" ToRole="Diary" />
+    <NavigationProperty Name="Goal" Relationship="Self.FK__Accounts__id_Acc__373B3228" FromRole="Accounts" ToRole="Goals" />
+    <NavigationProperty Name="Progress" Relationship="Self.FK__Accounts__id_Acc__39237A9A" FromRole="Accounts" ToRole="Progress" />
+  </EntityType>
+  <EntityType Name="Accounts_Cardio">
+    <Key>
+      <PropertyRef Name="id_Acc_Cardio" />
+    </Key>
+    <Property Name="id_Acc_Cardio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_Cardio" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__4F12BBB9" FromRole="Accounts_Cardio" ToRole="Accounts" />
+    <NavigationProperty Name="MyCardio" Relationship="Self.FK__Accounts___id_Ca__5006DFF2" FromRole="Accounts_Cardio" ToRole="MyCardio" />
+  </EntityType>
+  <EntityType Name="Accounts_Friends">
+    <Key>
+      <PropertyRef Name="id_Acc_Friends" />
+    </Key>
+    <Property Name="id_Acc_Friends" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_Friends" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__43A1090D" FromRole="Accounts_Friends" ToRole="Accounts" />
+    <NavigationProperty Name="Friend" Relationship="Self.FK__Accounts___id_Fr__44952D46" FromRole="Accounts_Friends" ToRole="Friends" />
+  </EntityType>
+  <EntityType Name="Accounts_Meals">
+    <Key>
+      <PropertyRef Name="id_Acc_Meals" />
+    </Key>
+    <Property Name="id_Acc_Meals" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_Meals" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__477199F1" FromRole="Accounts_Meals" ToRole="Accounts" />
+    <NavigationProperty Name="MyMeal" Relationship="Self.FK__Accounts___id_Me__4865BE2A" FromRole="Accounts_Meals" ToRole="MyMeals" />
+  </EntityType>
+  <EntityType Name="Accounts_Notification">
+    <Key>
+      <PropertyRef Name="id_Acc_Notification" />
+    </Key>
+    <Property Name="id_Acc_Notification" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_Notification" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__3BFFE745" FromRole="Accounts_Notification" ToRole="Accounts" />
+    <NavigationProperty Name="Notification" Relationship="Self.FK__Accounts___id_No__3CF40B7E" FromRole="Accounts_Notification" ToRole="Notifications" />
+  </EntityType>
+  <EntityType Name="Accounts_Recipes">
+    <Key>
+      <PropertyRef Name="id_Acc_Recipes" />
+    </Key>
+    <Property Name="id_Acc_Recipes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_MyRecipes" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__4B422AD5" FromRole="Accounts_Recipes" ToRole="Accounts" />
+    <NavigationProperty Name="MyRecipe" Relationship="Self.FK__Accounts___id_My__4C364F0E" FromRole="Accounts_Recipes" ToRole="MyRecipes" />
+  </EntityType>
+  <EntityType Name="Accounts_Reminder">
+    <Key>
+      <PropertyRef Name="id_Acc_Reminder" />
+    </Key>
+    <Property Name="id_Acc_Reminder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_Reminder" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__3FD07829" FromRole="Accounts_Reminder" ToRole="Accounts" />
+    <NavigationProperty Name="Reminder" Relationship="Self.FK__Accounts___id_Re__40C49C62" FromRole="Accounts_Reminder" ToRole="Reminder" />
+  </EntityType>
+  <EntityType Name="Accounts_Strength">
+    <Key>
+      <PropertyRef Name="id_Acc_Strength" />
+    </Key>
+    <Property Name="id_Acc_Strength" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Account" Type="Int32" />
+    <Property Name="id_Strength" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Accounts___id_Ac__52E34C9D" FromRole="Accounts_Strength" ToRole="Accounts" />
+    <NavigationProperty Name="MyStrength" Relationship="Self.FK__Accounts___id_St__53D770D6" FromRole="Accounts_Strength" ToRole="MyStrength" />
+  </EntityType>
+  <EntityType Name="BreakfastGoal">
+    <Key>
+      <PropertyRef Name="id_Breakfast" />
+    </Key>
+    <Property Name="id_Breakfast" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="MealGoals" Relationship="Self.FK__MealGoals__id_Br__5812160E" FromRole="BreakfastGoals" ToRole="MealGoals" />
+  </EntityType>
+  <EntityType Name="Cardio">
+    <Key>
+      <PropertyRef Name="id_Cardio" />
+    </Key>
+    <Property Name="id_Cardio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cardio_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Duration_min" Type="Int32" />
+    <Property Name="Calories_burned" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Diary">
+    <Key>
+      <PropertyRef Name="id_Diary" />
+    </Key>
+    <Property Name="id_Diary" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Diary_Entry" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK__Accounts__id_Acc__36470DEF" FromRole="Diary" ToRole="Accounts" />
+    <NavigationProperty Name="DiaryEntry" Relationship="Self.FK__Diary__id_Diary___24285DB4" FromRole="Diary" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryBreakfast">
+    <Key>
+      <PropertyRef Name="id_DiaryBreakfast" />
+    </Key>
+    <Property Name="id_DiaryBreakfast" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__19AACF41" FromRole="DiaryBreakfast" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryCardio">
+    <Key>
+      <PropertyRef Name="id_DiaryCardio" />
+    </Key>
+    <Property Name="id_DiaryCardio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cardio_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Duration_min" Type="Int32" />
+    <Property Name="Calories_burned" Type="Int32" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__1E6F845E" FromRole="DiaryCardio" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryDinner">
+    <Key>
+      <PropertyRef Name="id_DiaryDinner" />
+    </Key>
+    <Property Name="id_DiaryDinner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__1D7B6025" FromRole="DiaryDinner" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryEntry">
+    <Key>
+      <PropertyRef Name="id_DiaryEntry" />
+    </Key>
+    <Property Name="id_DiaryEntry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DiaryDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_DEntry_DBreakfast" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DSnack1" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DLunch" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DSnack2" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DDinner" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DCardio" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DStrength" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DWater" Type="Int32" Nullable="false" />
+    <Property Name="id_DEntry_DNotes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Diaries" Relationship="Self.FK__Diary__id_Diary___24285DB4" FromRole="DiaryEntry" ToRole="Diary" />
+    <NavigationProperty Name="DiaryBreakfast" Relationship="Self.FK__DiaryEntr__id_DE__19AACF41" FromRole="DiaryEntry" ToRole="DiaryBreakfast" />
+    <NavigationProperty Name="DiaryCardio" Relationship="Self.FK__DiaryEntr__id_DE__1E6F845E" FromRole="DiaryEntry" ToRole="DiaryCardio" />
+    <NavigationProperty Name="DiaryDinner" Relationship="Self.FK__DiaryEntr__id_DE__1D7B6025" FromRole="DiaryEntry" ToRole="DiaryDinner" />
+    <NavigationProperty Name="DiarySnack1" Relationship="Self.FK__DiaryEntr__id_DE__1A9EF37A" FromRole="DiaryEntry" ToRole="DiarySnack1" />
+    <NavigationProperty Name="DiaryLunch" Relationship="Self.FK__DiaryEntr__id_DE__1B9317B3" FromRole="DiaryEntry" ToRole="DiaryLunch" />
+    <NavigationProperty Name="DiarySnack2" Relationship="Self.FK__DiaryEntr__id_DE__1C873BEC" FromRole="DiaryEntry" ToRole="DiarySnack2" />
+    <NavigationProperty Name="DiaryStrength" Relationship="Self.FK__DiaryEntr__id_DE__1F63A897" FromRole="DiaryEntry" ToRole="DiaryStrength" />
+    <NavigationProperty Name="DiaryWater" Relationship="Self.FK__DiaryEntr__id_DE__2057CCD0" FromRole="DiaryEntry" ToRole="DiaryWater" />
+    <NavigationProperty Name="DiaryNote" Relationship="Self.FK__DiaryEntr__id_DE__214BF109" FromRole="DiaryEntry" ToRole="DiaryNotes" />
+  </EntityType>
+  <EntityType Name="DiaryLunch">
+    <Key>
+      <PropertyRef Name="id_DiaryLunch" />
+    </Key>
+    <Property Name="id_DiaryLunch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__1B9317B3" FromRole="DiaryLunch" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryNote">
+    <Key>
+      <PropertyRef Name="id_DiaryNotes" />
+    </Key>
+    <Property Name="id_DiaryNotes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NoteType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__214BF109" FromRole="DiaryNotes" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiarySnack1">
+    <Key>
+      <PropertyRef Name="id_DiarySnack1" />
+    </Key>
+    <Property Name="id_DiarySnack1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__1A9EF37A" FromRole="DiarySnack1" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiarySnack2">
+    <Key>
+      <PropertyRef Name="id_DiarySnack2" />
+    </Key>
+    <Property Name="id_DiarySnack2" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__1C873BEC" FromRole="DiarySnack2" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryStrength">
+    <Key>
+      <PropertyRef Name="id_DiaryStrength" />
+    </Key>
+    <Property Name="id_DiaryStrength" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Strength_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NbOfSets" Type="Int32" />
+    <Property Name="RepsPerSet" Type="Int32" />
+    <Property Name="WeightPerRep" Type="Int32" />
+    <Property Name="Calories_burned" Type="Int32" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__1F63A897" FromRole="DiaryStrength" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DiaryWater">
+    <Key>
+      <PropertyRef Name="id_DiaryWater" />
+    </Key>
+    <Property Name="id_DiaryWater" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Quantity_ml" Type="Int32" />
+    <NavigationProperty Name="DiaryEntries" Relationship="Self.FK__DiaryEntr__id_DE__2057CCD0" FromRole="DiaryWater" ToRole="DiaryEntry" />
+  </EntityType>
+  <EntityType Name="DinnerGoal">
+    <Key>
+      <PropertyRef Name="id_Dinner" />
+    </Key>
+    <Property Name="id_Dinner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="MealGoals" Relationship="Self.FK__MealGoals__id_Di__5BE2A6F2" FromRole="DinnerGoals" ToRole="MealGoals" />
+  </EntityType>
+  <EntityType Name="FitnessGoal">
+    <Key>
+      <PropertyRef Name="id_FitnessGoals" />
+    </Key>
+    <Property Name="id_FitnessGoals" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkoutsPerWeek" Type="Int32" />
+    <Property Name="MinutesPerWorkout" Type="Int32" />
+    <Property Name="CaloriesPerWorkout" Type="Int32" />
+    <NavigationProperty Name="Goals" Relationship="Self.FK__Goals__id_Goals___797309D9" FromRole="FitnessGoals" ToRole="Goals" />
+  </EntityType>
+  <EntityType Name="FriendMessage">
+    <Key>
+      <PropertyRef Name="id_FriendMessage" />
+    </Key>
+    <Property Name="id_FriendMessage" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fromUsername" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="toUsername" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FriendRequest">
+    <Key>
+      <PropertyRef Name="id_FriendRequest" />
+    </Key>
+    <Property Name="id_FriendRequest" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fromUsername" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="toUsername" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Friend">
+    <Key>
+      <PropertyRef Name="id_Friend" />
+    </Key>
+    <Property Name="id_Friend" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accounts_Friends" Relationship="Self.FK__Accounts___id_Fr__44952D46" FromRole="Friends" ToRole="Accounts_Friends" />
+  </EntityType>
+  <EntityType Name="Goal">
+    <Key>
+      <PropertyRef Name="id_Goals" />
+    </Key>
+    <Property Name="id_Goals" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Goals_FitnessG" Type="Int32" Nullable="false" />
+    <Property Name="id_Goals_WeightG" Type="Int32" Nullable="false" />
+    <Property Name="id_Goals_Nutrition" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK__Accounts__id_Acc__373B3228" FromRole="Goals" ToRole="Accounts" />
+    <NavigationProperty Name="FitnessGoal" Relationship="Self.FK__Goals__id_Goals___797309D9" FromRole="Goals" ToRole="FitnessGoals" />
+    <NavigationProperty Name="WeightGoal" Relationship="Self.FK__Goals__id_Goals___7A672E12" FromRole="Goals" ToRole="WeightGoals" />
+    <NavigationProperty Name="NutritionGoal" Relationship="Self.FK__Goals__id_Goals___7B5B524B" FromRole="Goals" ToRole="NutritionGoals" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="id_ingredient" />
+    </Key>
+    <Property Name="id_ingredient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+  </EntityType>
+  <EntityType Name="LunchGoal">
+    <Key>
+      <PropertyRef Name="id_Lunch" />
+    </Key>
+    <Property Name="id_Lunch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="MealGoals" Relationship="Self.FK__MealGoals__id_Lu__59FA5E80" FromRole="LunchGoals" ToRole="MealGoals" />
+  </EntityType>
+  <EntityType Name="MealGoal">
+    <Key>
+      <PropertyRef Name="id_MealGoals" />
+    </Key>
+    <Property Name="id_MealGoals" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_BreakfastG_MealG" Type="Int32" />
+    <Property Name="id_Snack1G_MealG" Type="Int32" />
+    <Property Name="id_LunchG_MealG" Type="Int32" />
+    <Property Name="id_Snack2G_MealG" Type="Int32" />
+    <Property Name="id_DinnerG_MealG" Type="Int32" />
+    <NavigationProperty Name="BreakfastGoal" Relationship="Self.FK__MealGoals__id_Br__5812160E" FromRole="MealGoals" ToRole="BreakfastGoals" />
+    <NavigationProperty Name="DinnerGoal" Relationship="Self.FK__MealGoals__id_Di__5BE2A6F2" FromRole="MealGoals" ToRole="DinnerGoals" />
+    <NavigationProperty Name="LunchGoal" Relationship="Self.FK__MealGoals__id_Lu__59FA5E80" FromRole="MealGoals" ToRole="LunchGoals" />
+    <NavigationProperty Name="Snack1Goals" Relationship="Self.FK__MealGoals__id_Sn__59063A47" FromRole="MealGoals" ToRole="Snack1Goals" />
+    <NavigationProperty Name="Snack2Goals" Relationship="Self.FK__MealGoals__id_Sn__5AEE82B9" FromRole="MealGoals" ToRole="Snack2Goals" />
+    <NavigationProperty Name="NutritionGoals" Relationship="Self.FK__Nutrition__id_Nu__5EBF139D" FromRole="MealGoals" ToRole="NutritionGoals" />
+  </EntityType>
+  <EntityType Name="MyCardio">
+    <Key>
+      <PropertyRef Name="id_myCardio" />
+    </Key>
+    <Property Name="id_myCardio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cardio_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Duration_min" Type="Int32" />
+    <Property Name="Calories_burned" Type="Int32" />
+    <NavigationProperty Name="Accounts_Cardio" Relationship="Self.FK__Accounts___id_Ca__5006DFF2" FromRole="MyCardio" ToRole="Accounts_Cardio" />
+  </EntityType>
+  <EntityType Name="MyMeal">
+    <Key>
+      <PropertyRef Name="id_myMeal" />
+    </Key>
+    <Property Name="id_myMeal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="Accounts_Meals" Relationship="Self.FK__Accounts___id_Me__4865BE2A" FromRole="MyMeals" ToRole="Accounts_Meals" />
+  </EntityType>
+  <EntityType Name="MyRecipe">
+    <Key>
+      <PropertyRef Name="id_myRecipe" />
+    </Key>
+    <Property Name="id_myRecipe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Servings" Type="Double" />
+    <Property Name="Reciepe_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="Accounts_Recipes" Relationship="Self.FK__Accounts___id_My__4C364F0E" FromRole="MyRecipes" ToRole="Accounts_Recipes" />
+  </EntityType>
+  <EntityType Name="MyStrength">
+    <Key>
+      <PropertyRef Name="id_myStrength" />
+    </Key>
+    <Property Name="id_myStrength" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MyStrength_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NbOfSets" Type="Int32" />
+    <Property Name="RepsPerSet" Type="Int32" />
+    <Property Name="WeightPerRep" Type="Int32" />
+    <Property Name="Calories_burned" Type="Int32" />
+    <NavigationProperty Name="Accounts_Strength" Relationship="Self.FK__Accounts___id_St__53D770D6" FromRole="MyStrength" ToRole="Accounts_Strength" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="id_Notification" />
+    </Key>
+    <Property Name="id_Notification" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NotDate" Type="DateTime" Precision="3" />
+    <Property Name="NotDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accounts_Notification" Relationship="Self.FK__Accounts___id_No__3CF40B7E" FromRole="Notifications" ToRole="Accounts_Notification" />
+  </EntityType>
+  <EntityType Name="NutritionGoal">
+    <Key>
+      <PropertyRef Name="id_NutritionGoals" />
+    </Key>
+    <Property Name="id_NutritionGoals" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_NutritionG_MealG" Type="Int32" />
+    <Property Name="CaloriesPerDay" Type="Double" />
+    <Property Name="CarbsPerDay" Type="Double" />
+    <Property Name="ProteinPerDay" Type="Double" />
+    <Property Name="FatPerDay" Type="Double" />
+    <Property Name="CholesterolPerDay" Type="Double" />
+    <Property Name="SodiumPerDay" Type="Double" />
+    <Property Name="PotassiumPerDay" Type="Double" />
+    <Property Name="FiberPerDay" Type="Double" />
+    <Property Name="SugarsPerDay" Type="Double" />
+    <Property Name="VitAPerDay" Type="Double" />
+    <Property Name="VitCPerDay" Type="Double" />
+    <Property Name="CalciumPerDay" Type="Double" />
+    <Property Name="IronPerDay" Type="Double" />
+    <NavigationProperty Name="Goals" Relationship="Self.FK__Goals__id_Goals___7B5B524B" FromRole="NutritionGoals" ToRole="Goals" />
+    <NavigationProperty Name="MealGoal" Relationship="Self.FK__Nutrition__id_Nu__5EBF139D" FromRole="NutritionGoals" ToRole="MealGoals" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="id_Post" />
+    </Key>
+    <Property Name="id_Post" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FromId" Type="Int32" />
+    <Property Name="PostDate" Type="DateTime" Precision="3" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Progress">
+    <Key>
+      <PropertyRef Name="id_Progress" />
+    </Key>
+    <Property Name="id_Progress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pDate" Type="DateTime" Precision="0" />
+    <Property Name="pWeight" Type="Double" />
+    <Property Name="pWaist" Type="Double" />
+    <Property Name="pHips" Type="Double" />
+    <Property Name="pLegs" Type="Double" />
+    <Property Name="pBut" Type="Double" />
+    <Property Name="pPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK__Accounts__id_Acc__39237A9A" FromRole="Progress" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="Reminder">
+    <Key>
+      <PropertyRef Name="id_Reminder" />
+    </Key>
+    <Property Name="id_Reminder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReminderDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ReminderTime" Type="Time" Precision="0" />
+    <NavigationProperty Name="Accounts_Reminder" Relationship="Self.FK__Accounts___id_Re__40C49C62" FromRole="Reminder" ToRole="Accounts_Reminder" />
+  </EntityType>
+  <EntityType Name="Snack1Goals">
+    <Key>
+      <PropertyRef Name="id_Snack1" />
+    </Key>
+    <Property Name="id_Snack1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="MealGoals" Relationship="Self.FK__MealGoals__id_Sn__59063A47" FromRole="Snack1Goals" ToRole="MealGoals" />
+  </EntityType>
+  <EntityType Name="Snack2Goals">
+    <Key>
+      <PropertyRef Name="id_Snack2" />
+    </Key>
+    <Property Name="id_Snack2" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="Carbs" Type="Double" />
+    <Property Name="Protein" Type="Double" />
+    <Property Name="Fat" Type="Double" />
+    <Property Name="Cholesterol" Type="Double" />
+    <Property Name="Sodium" Type="Double" />
+    <Property Name="Potassium" Type="Double" />
+    <Property Name="Fiber" Type="Double" />
+    <Property Name="Sugars" Type="Double" />
+    <Property Name="VitA" Type="Double" />
+    <Property Name="VitC" Type="Double" />
+    <Property Name="Calcium" Type="Double" />
+    <Property Name="Iron" Type="Double" />
+    <NavigationProperty Name="MealGoals" Relationship="Self.FK__MealGoals__id_Sn__5AEE82B9" FromRole="Snack2Goals" ToRole="MealGoals" />
+  </EntityType>
+  <EntityType Name="Strength">
+    <Key>
+      <PropertyRef Name="id_Strength" />
+    </Key>
+    <Property Name="id_Strength" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Strength_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NbOfSets" Type="Int32" />
+    <Property Name="RepsPerSet" Type="Int32" />
+    <Property Name="WeightPerRep" Type="Int32" />
+    <Property Name="Calories_burned" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WeightGoal">
+    <Key>
+      <PropertyRef Name="id_WeightGoals" />
+    </Key>
+    <Property Name="id_WeightGoals" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartingWeight" Type="Double" />
+    <Property Name="CurrentWeight" Type="Double" />
+    <Property Name="GoalWeight" Type="Double" />
+    <Property Name="WeeklyGoal" Type="Double" />
+    <Property Name="ActivityLevel" Type="Int32" />
+    <NavigationProperty Name="Goals" Relationship="Self.FK__Goals__id_Goals___7A672E12" FromRole="WeightGoals" ToRole="Goals" />
+  </EntityType>
+  <Association Name="FK__Accounts__id_Acc__382F5661">
+    <End Role="AccountCredentials" Type="Self.AccountCredential" Multiplicity="1" />
+    <End Role="Accounts" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountCredentials">
+        <PropertyRef Name="id_AccCredentials" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="id_Account_AccountCredentials" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__3BFFE745">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Notification" Type="Self.Accounts_Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Notification">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__3FD07829">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Reminder" Type="Self.Accounts_Reminder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Reminder">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__43A1090D">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Friends" Type="Self.Accounts_Friends" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Friends">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__477199F1">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Meals" Type="Self.Accounts_Meals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Meals">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__4B422AD5">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Recipes" Type="Self.Accounts_Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Recipes">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__4F12BBB9">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Cardio" Type="Self.Accounts_Cardio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Cardio">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ac__52E34C9D">
+    <End Role="Accounts" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Accounts_Strength" Type="Self.Accounts_Strength" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="id_Account" />
+      </Principal>
+      <Dependent Role="Accounts_Strength">
+        <PropertyRef Name="id_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts__id_Acc__36470DEF">
+    <End Role="Diary" Type="Self.Diary" Multiplicity="1" />
+    <End Role="Accounts" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diary">
+        <PropertyRef Name="id_Diary" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="id_Account_Diary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts__id_Acc__373B3228">
+    <End Role="Goals" Type="Self.Goal" Multiplicity="1" />
+    <End Role="Accounts" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goals">
+        <PropertyRef Name="id_Goals" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="id_Account_Goals" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts__id_Acc__39237A9A">
+    <End Role="Progress" Type="Self.Progress" Multiplicity="1" />
+    <End Role="Accounts" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Progress">
+        <PropertyRef Name="id_Progress" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="id_Account_Progress" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Ca__5006DFF2">
+    <End Role="MyCardio" Type="Self.MyCardio" Multiplicity="0..1" />
+    <End Role="Accounts_Cardio" Type="Self.Accounts_Cardio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyCardio">
+        <PropertyRef Name="id_myCardio" />
+      </Principal>
+      <Dependent Role="Accounts_Cardio">
+        <PropertyRef Name="id_Cardio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Fr__44952D46">
+    <End Role="Friends" Type="Self.Friend" Multiplicity="0..1" />
+    <End Role="Accounts_Friends" Type="Self.Accounts_Friends" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Friends">
+        <PropertyRef Name="id_Friend" />
+      </Principal>
+      <Dependent Role="Accounts_Friends">
+        <PropertyRef Name="id_Friends" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Me__4865BE2A">
+    <End Role="MyMeals" Type="Self.MyMeal" Multiplicity="0..1" />
+    <End Role="Accounts_Meals" Type="Self.Accounts_Meals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyMeals">
+        <PropertyRef Name="id_myMeal" />
+      </Principal>
+      <Dependent Role="Accounts_Meals">
+        <PropertyRef Name="id_Meals" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_No__3CF40B7E">
+    <End Role="Notifications" Type="Self.Notification" Multiplicity="0..1" />
+    <End Role="Accounts_Notification" Type="Self.Accounts_Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notifications">
+        <PropertyRef Name="id_Notification" />
+      </Principal>
+      <Dependent Role="Accounts_Notification">
+        <PropertyRef Name="id_Notification" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_My__4C364F0E">
+    <End Role="MyRecipes" Type="Self.MyRecipe" Multiplicity="0..1" />
+    <End Role="Accounts_Recipes" Type="Self.Accounts_Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyRecipes">
+        <PropertyRef Name="id_myRecipe" />
+      </Principal>
+      <Dependent Role="Accounts_Recipes">
+        <PropertyRef Name="id_MyRecipes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_Re__40C49C62">
+    <End Role="Reminder" Type="Self.Reminder" Multiplicity="0..1" />
+    <End Role="Accounts_Reminder" Type="Self.Accounts_Reminder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reminder">
+        <PropertyRef Name="id_Reminder" />
+      </Principal>
+      <Dependent Role="Accounts_Reminder">
+        <PropertyRef Name="id_Reminder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts___id_St__53D770D6">
+    <End Role="MyStrength" Type="Self.MyStrength" Multiplicity="0..1" />
+    <End Role="Accounts_Strength" Type="Self.Accounts_Strength" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyStrength">
+        <PropertyRef Name="id_myStrength" />
+      </Principal>
+      <Dependent Role="Accounts_Strength">
+        <PropertyRef Name="id_Strength" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MealGoals__id_Br__5812160E">
+    <End Role="BreakfastGoals" Type="Self.BreakfastGoal" Multiplicity="0..1" />
+    <End Role="MealGoals" Type="Self.MealGoal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BreakfastGoals">
+        <PropertyRef Name="id_Breakfast" />
+      </Principal>
+      <Dependent Role="MealGoals">
+        <PropertyRef Name="id_BreakfastG_MealG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Diary__id_Diary___24285DB4">
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="1" />
+    <End Role="Diary" Type="Self.Diary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryEntry">
+        <PropertyRef Name="id_DiaryEntry" />
+      </Principal>
+      <Dependent Role="Diary">
+        <PropertyRef Name="id_Diary_Entry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__19AACF41">
+    <End Role="DiaryBreakfast" Type="Self.DiaryBreakfast" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryBreakfast">
+        <PropertyRef Name="id_DiaryBreakfast" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DBreakfast" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__1E6F845E">
+    <End Role="DiaryCardio" Type="Self.DiaryCardio" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryCardio">
+        <PropertyRef Name="id_DiaryCardio" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DCardio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__1D7B6025">
+    <End Role="DiaryDinner" Type="Self.DiaryDinner" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryDinner">
+        <PropertyRef Name="id_DiaryDinner" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DDinner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__1A9EF37A">
+    <End Role="DiarySnack1" Type="Self.DiarySnack1" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiarySnack1">
+        <PropertyRef Name="id_DiarySnack1" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DSnack1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__1B9317B3">
+    <End Role="DiaryLunch" Type="Self.DiaryLunch" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryLunch">
+        <PropertyRef Name="id_DiaryLunch" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DLunch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__1C873BEC">
+    <End Role="DiarySnack2" Type="Self.DiarySnack2" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiarySnack2">
+        <PropertyRef Name="id_DiarySnack2" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DSnack2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__1F63A897">
+    <End Role="DiaryStrength" Type="Self.DiaryStrength" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryStrength">
+        <PropertyRef Name="id_DiaryStrength" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DStrength" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__2057CCD0">
+    <End Role="DiaryWater" Type="Self.DiaryWater" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryWater">
+        <PropertyRef Name="id_DiaryWater" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DWater" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiaryEntr__id_DE__214BF109">
+    <End Role="DiaryNotes" Type="Self.DiaryNote" Multiplicity="1" />
+    <End Role="DiaryEntry" Type="Self.DiaryEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaryNotes">
+        <PropertyRef Name="id_DiaryNotes" />
+      </Principal>
+      <Dependent Role="DiaryEntry">
+        <PropertyRef Name="id_DEntry_DNotes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MealGoals__id_Di__5BE2A6F2">
+    <End Role="DinnerGoals" Type="Self.DinnerGoal" Multiplicity="0..1" />
+    <End Role="MealGoals" Type="Self.MealGoal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DinnerGoals">
+        <PropertyRef Name="id_Dinner" />
+      </Principal>
+      <Dependent Role="MealGoals">
+        <PropertyRef Name="id_DinnerG_MealG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Goals__id_Goals___797309D9">
+    <End Role="FitnessGoals" Type="Self.FitnessGoal" Multiplicity="1" />
+    <End Role="Goals" Type="Self.Goal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FitnessGoals">
+        <PropertyRef Name="id_FitnessGoals" />
+      </Principal>
+      <Dependent Role="Goals">
+        <PropertyRef Name="id_Goals_FitnessG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Goals__id_Goals___7A672E12">
+    <End Role="WeightGoals" Type="Self.WeightGoal" Multiplicity="1" />
+    <End Role="Goals" Type="Self.Goal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeightGoals">
+        <PropertyRef Name="id_WeightGoals" />
+      </Principal>
+      <Dependent Role="Goals">
+        <PropertyRef Name="id_Goals_WeightG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Goals__id_Goals___7B5B524B">
+    <End Role="NutritionGoals" Type="Self.NutritionGoal" Multiplicity="1" />
+    <End Role="Goals" Type="Self.Goal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NutritionGoals">
+        <PropertyRef Name="id_NutritionGoals" />
+      </Principal>
+      <Dependent Role="Goals">
+        <PropertyRef Name="id_Goals_Nutrition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MealGoals__id_Lu__59FA5E80">
+    <End Role="LunchGoals" Type="Self.LunchGoal" Multiplicity="0..1" />
+    <End Role="MealGoals" Type="Self.MealGoal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LunchGoals">
+        <PropertyRef Name="id_Lunch" />
+      </Principal>
+      <Dependent Role="MealGoals">
+        <PropertyRef Name="id_LunchG_MealG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MealGoals__id_Sn__59063A47">
+    <End Role="Snack1Goals" Type="Self.Snack1Goals" Multiplicity="0..1" />
+    <End Role="MealGoals" Type="Self.MealGoal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Snack1Goals">
+        <PropertyRef Name="id_Snack1" />
+      </Principal>
+      <Dependent Role="MealGoals">
+        <PropertyRef Name="id_Snack1G_MealG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MealGoals__id_Sn__5AEE82B9">
+    <End Role="Snack2Goals" Type="Self.Snack2Goals" Multiplicity="0..1" />
+    <End Role="MealGoals" Type="Self.MealGoal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Snack2Goals">
+        <PropertyRef Name="id_Snack2" />
+      </Principal>
+      <Dependent Role="MealGoals">
+        <PropertyRef Name="id_Snack2G_MealG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nutrition__id_Nu__5EBF139D">
+    <End Role="MealGoals" Type="Self.MealGoal" Multiplicity="0..1" />
+    <End Role="NutritionGoals" Type="Self.NutritionGoal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MealGoals">
+        <PropertyRef Name="id_MealGoals" />
+      </Principal>
+      <Dependent Role="NutritionGoals">
+        <PropertyRef Name="id_NutritionG_MealG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyFitEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccountCredentials" EntityType="Self.AccountCredential" />
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Accounts_Cardio" EntityType="Self.Accounts_Cardio" />
+    <EntitySet Name="Accounts_Friends" EntityType="Self.Accounts_Friends" />
+    <EntitySet Name="Accounts_Meals" EntityType="Self.Accounts_Meals" />
+    <EntitySet Name="Accounts_Notification" EntityType="Self.Accounts_Notification" />
+    <EntitySet Name="Accounts_Recipes" EntityType="Self.Accounts_Recipes" />
+    <EntitySet Name="Accounts_Reminder" EntityType="Self.Accounts_Reminder" />
+    <EntitySet Name="Accounts_Strength" EntityType="Self.Accounts_Strength" />
+    <EntitySet Name="BreakfastGoals" EntityType="Self.BreakfastGoal" />
+    <EntitySet Name="Cardios" EntityType="Self.Cardio" />
+    <EntitySet Name="Diaries" EntityType="Self.Diary" />
+    <EntitySet Name="DiaryBreakfasts" EntityType="Self.DiaryBreakfast" />
+    <EntitySet Name="DiaryCardios" EntityType="Self.DiaryCardio" />
+    <EntitySet Name="DiaryDinners" EntityType="Self.DiaryDinner" />
+    <EntitySet Name="DiaryEntries" EntityType="Self.DiaryEntry" />
+    <EntitySet Name="DiaryLunches" EntityType="Self.DiaryLunch" />
+    <EntitySet Name="DiaryNotes" EntityType="Self.DiaryNote" />
+    <EntitySet Name="DiarySnack1" EntityType="Self.DiarySnack1" />
+    <EntitySet Name="DiarySnack2" EntityType="Self.DiarySnack2" />
+    <EntitySet Name="DiaryStrengths" EntityType="Self.DiaryStrength" />
+    <EntitySet Name="DiaryWaters" EntityType="Self.DiaryWater" />
+    <EntitySet Name="DinnerGoals" EntityType="Self.DinnerGoal" />
+    <EntitySet Name="FitnessGoals" EntityType="Self.FitnessGoal" />
+    <EntitySet Name="FriendMessages" EntityType="Self.FriendMessage" />
+    <EntitySet Name="FriendRequests" EntityType="Self.FriendRequest" />
+    <EntitySet Name="Friends" EntityType="Self.Friend" />
+    <EntitySet Name="Goals" EntityType="Self.Goal" />
+    <EntitySet Name="Ingredients" EntityType="Self.Ingredient" />
+    <EntitySet Name="LunchGoals" EntityType="Self.LunchGoal" />
+    <EntitySet Name="MealGoals" EntityType="Self.MealGoal" />
+    <EntitySet Name="MyCardios" EntityType="Self.MyCardio" />
+    <EntitySet Name="MyMeals" EntityType="Self.MyMeal" />
+    <EntitySet Name="MyRecipes" EntityType="Self.MyRecipe" />
+    <EntitySet Name="MyStrengths" EntityType="Self.MyStrength" />
+    <EntitySet Name="Notifications" EntityType="Self.Notification" />
+    <EntitySet Name="NutritionGoals" EntityType="Self.NutritionGoal" />
+    <EntitySet Name="Posts" EntityType="Self.Post" />
+    <EntitySet Name="Progresses" EntityType="Self.Progress" />
+    <EntitySet Name="Reminders" EntityType="Self.Reminder" />
+    <EntitySet Name="Snack1Goals" EntityType="Self.Snack1Goals" />
+    <EntitySet Name="Snack2Goals" EntityType="Self.Snack2Goals" />
+    <EntitySet Name="Strengths" EntityType="Self.Strength" />
+    <EntitySet Name="WeightGoals" EntityType="Self.WeightGoal" />
+    <AssociationSet Name="FK__Accounts__id_Acc__382F5661" Association="Self.FK__Accounts__id_Acc__382F5661">
+      <End Role="AccountCredentials" EntitySet="AccountCredentials" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__3BFFE745" Association="Self.FK__Accounts___id_Ac__3BFFE745">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Notification" EntitySet="Accounts_Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__3FD07829" Association="Self.FK__Accounts___id_Ac__3FD07829">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Reminder" EntitySet="Accounts_Reminder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__43A1090D" Association="Self.FK__Accounts___id_Ac__43A1090D">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Friends" EntitySet="Accounts_Friends" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__477199F1" Association="Self.FK__Accounts___id_Ac__477199F1">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Meals" EntitySet="Accounts_Meals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__4B422AD5" Association="Self.FK__Accounts___id_Ac__4B422AD5">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Recipes" EntitySet="Accounts_Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__4F12BBB9" Association="Self.FK__Accounts___id_Ac__4F12BBB9">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Cardio" EntitySet="Accounts_Cardio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ac__52E34C9D" Association="Self.FK__Accounts___id_Ac__52E34C9D">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Accounts_Strength" EntitySet="Accounts_Strength" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts__id_Acc__36470DEF" Association="Self.FK__Accounts__id_Acc__36470DEF">
+      <End Role="Diary" EntitySet="Diaries" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts__id_Acc__373B3228" Association="Self.FK__Accounts__id_Acc__373B3228">
+      <End Role="Goals" EntitySet="Goals" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts__id_Acc__39237A9A" Association="Self.FK__Accounts__id_Acc__39237A9A">
+      <End Role="Progress" EntitySet="Progresses" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Ca__5006DFF2" Association="Self.FK__Accounts___id_Ca__5006DFF2">
+      <End Role="MyCardio" EntitySet="MyCardios" />
+      <End Role="Accounts_Cardio" EntitySet="Accounts_Cardio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Fr__44952D46" Association="Self.FK__Accounts___id_Fr__44952D46">
+      <End Role="Friends" EntitySet="Friends" />
+      <End Role="Accounts_Friends" EntitySet="Accounts_Friends" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Me__4865BE2A" Association="Self.FK__Accounts___id_Me__4865BE2A">
+      <End Role="MyMeals" EntitySet="MyMeals" />
+      <End Role="Accounts_Meals" EntitySet="Accounts_Meals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_No__3CF40B7E" Association="Self.FK__Accounts___id_No__3CF40B7E">
+      <End Role="Notifications" EntitySet="Notifications" />
+      <End Role="Accounts_Notification" EntitySet="Accounts_Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_My__4C364F0E" Association="Self.FK__Accounts___id_My__4C364F0E">
+      <End Role="MyRecipes" EntitySet="MyRecipes" />
+      <End Role="Accounts_Recipes" EntitySet="Accounts_Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_Re__40C49C62" Association="Self.FK__Accounts___id_Re__40C49C62">
+      <End Role="Reminder" EntitySet="Reminders" />
+      <End Role="Accounts_Reminder" EntitySet="Accounts_Reminder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts___id_St__53D770D6" Association="Self.FK__Accounts___id_St__53D770D6">
+      <End Role="MyStrength" EntitySet="MyStrengths" />
+      <End Role="Accounts_Strength" EntitySet="Accounts_Strength" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MealGoals__id_Br__5812160E" Association="Self.FK__MealGoals__id_Br__5812160E">
+      <End Role="BreakfastGoals" EntitySet="BreakfastGoals" />
+      <End Role="MealGoals" EntitySet="MealGoals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Diary__id_Diary___24285DB4" Association="Self.FK__Diary__id_Diary___24285DB4">
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+      <End Role="Diary" EntitySet="Diaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__19AACF41" Association="Self.FK__DiaryEntr__id_DE__19AACF41">
+      <End Role="DiaryBreakfast" EntitySet="DiaryBreakfasts" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__1E6F845E" Association="Self.FK__DiaryEntr__id_DE__1E6F845E">
+      <End Role="DiaryCardio" EntitySet="DiaryCardios" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__1D7B6025" Association="Self.FK__DiaryEntr__id_DE__1D7B6025">
+      <End Role="DiaryDinner" EntitySet="DiaryDinners" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__1A9EF37A" Association="Self.FK__DiaryEntr__id_DE__1A9EF37A">
+      <End Role="DiarySnack1" EntitySet="DiarySnack1" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__1B9317B3" Association="Self.FK__DiaryEntr__id_DE__1B9317B3">
+      <End Role="DiaryLunch" EntitySet="DiaryLunches" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__1C873BEC" Association="Self.FK__DiaryEntr__id_DE__1C873BEC">
+      <End Role="DiarySnack2" EntitySet="DiarySnack2" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__1F63A897" Association="Self.FK__DiaryEntr__id_DE__1F63A897">
+      <End Role="DiaryStrength" EntitySet="DiaryStrengths" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__2057CCD0" Association="Self.FK__DiaryEntr__id_DE__2057CCD0">
+      <End Role="DiaryWater" EntitySet="DiaryWaters" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiaryEntr__id_DE__214BF109" Association="Self.FK__DiaryEntr__id_DE__214BF109">
+      <End Role="DiaryNotes" EntitySet="DiaryNotes" />
+      <End Role="DiaryEntry" EntitySet="DiaryEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MealGoals__id_Di__5BE2A6F2" Association="Self.FK__MealGoals__id_Di__5BE2A6F2">
+      <End Role="DinnerGoals" EntitySet="DinnerGoals" />
+      <End Role="MealGoals" EntitySet="MealGoals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Goals__id_Goals___797309D9" Association="Self.FK__Goals__id_Goals___797309D9">
+      <End Role="FitnessGoals" EntitySet="FitnessGoals" />
+      <End Role="Goals" EntitySet="Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Goals__id_Goals___7A672E12" Association="Self.FK__Goals__id_Goals___7A672E12">
+      <End Role="WeightGoals" EntitySet="WeightGoals" />
+      <End Role="Goals" EntitySet="Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Goals__id_Goals___7B5B524B" Association="Self.FK__Goals__id_Goals___7B5B524B">
+      <End Role="NutritionGoals" EntitySet="NutritionGoals" />
+      <End Role="Goals" EntitySet="Goals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MealGoals__id_Lu__59FA5E80" Association="Self.FK__MealGoals__id_Lu__59FA5E80">
+      <End Role="LunchGoals" EntitySet="LunchGoals" />
+      <End Role="MealGoals" EntitySet="MealGoals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MealGoals__id_Sn__59063A47" Association="Self.FK__MealGoals__id_Sn__59063A47">
+      <End Role="Snack1Goals" EntitySet="Snack1Goals" />
+      <End Role="MealGoals" EntitySet="MealGoals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MealGoals__id_Sn__5AEE82B9" Association="Self.FK__MealGoals__id_Sn__5AEE82B9">
+      <End Role="Snack2Goals" EntitySet="Snack2Goals" />
+      <End Role="MealGoals" EntitySet="MealGoals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nutrition__id_Nu__5EBF139D" Association="Self.FK__Nutrition__id_Nu__5EBF139D">
+      <End Role="MealGoals" EntitySet="MealGoals" />
+      <End Role="NutritionGoals" EntitySet="NutritionGoals" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="FitnessApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="454.4">
+    <Grid>
+        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="227" Margin="71,94,0,-0.2" VerticalAlignment="Top" Width="423"/>
+        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="113,10,0,0" VerticalAlignment="Top" Width="237"/>
+        <Button Content="Click me" HorizontalAlignment="Left" Margin="197,220,0,0" VerticalAlignment="Top" Width="75" Background="#FFB42DED" BorderBrush="#FFB42DED" Foreground="White" FontFamily="Times New Roman" Click="Button_Click"/>
+
+    </Grid>
+</Window>

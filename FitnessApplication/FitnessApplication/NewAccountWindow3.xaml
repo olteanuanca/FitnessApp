@@ -1,0 +1,25 @@
+﻿<Window x:Class="FitnessApplication.NewAccountWindow3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="New Account: Step 3" Height="459.6" Width="800">
+    <Grid>
+        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="379,101,-100.4,0" VerticalAlignment="Top" Width="515"/>
+
+        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="91" Margin="444,24,0,0" VerticalAlignment="Top" Width="234"/>
+        <TextBox Name="friend1_textbox" HorizontalAlignment="Left" Height="26" Margin="10,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontFamily="Times New Roman" FontSize="14"/>
+        <Label  Content="Members Who Diet With Friends Lose 3X As Much Weight!" HorizontalAlignment="Left" Margin="22,24,0,0" VerticalAlignment="Top" Height="38" Width="536" FontFamily="Times New Roman" FontSize="18" Foreground="#FF500874" Background="#00000000" FontWeight="Bold"/>
+        <Button Name="addfriend_button" Content="Add Friends" HorizontalAlignment="Left" Margin="22,328,0,0" VerticalAlignment="Top" Width="72" Height="22" Background="#FFC29BC7" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold" Click="addfriend_button_Click"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" Height="34" Width="86" FontFamily="Times New Roman"/>
+        <Label Content="Enter the email address of up to 3 friends below:" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Height="38" Width="536" FontFamily="Times New Roman" FontSize="18" Foreground="#FF500874" Background="#00000000" FontWeight="Bold"/>
+        <Label Content="       Don't diet alone - your friends can provide you the critical support and &#xA;motivation you need to succeed.&#xA;&#xA;       Having a support group is key to losing weight, and keeping it off. So &#xA;add your friends, and they'll automatically be added to your friends &#xD;&#xA;list. You'll then be able to track each other's progress &#xA;and success, and motivate each other to achieve your goals." HorizontalAlignment="Left" Margin="22,63,0,0" VerticalAlignment="Top" Height="147" Width="536" FontFamily="Times New Roman" Foreground="#FF500874" Background="#00000000" FontSize="14"/>
+        <TextBox Name="friend2_textbox" HorizontalAlignment="Left" Height="26" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontFamily="Times New Roman" FontSize="14"/>
+        <TextBox Name="friend3_textbox" HorizontalAlignment="Left" Height="26" Margin="10,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontFamily="Times New Roman" FontSize="14"/>
+        <ProgressBar HorizontalAlignment="Left" Height="34" Margin="10,381,0,0" VerticalAlignment="Top" Width="709" Foreground="#FF4E0A96" Value="85"/>
+        <Label Content="Step 3" HorizontalAlignment="Left" Margin="13,357,0,0" VerticalAlignment="Top" Width="81" FontFamily="Times New Roman" RenderTransformOrigin="0.599,3.453"/>
+
+    </Grid>
+</Window>

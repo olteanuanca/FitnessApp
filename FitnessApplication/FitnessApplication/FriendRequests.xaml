@@ -1,0 +1,43 @@
+﻿<Window x:Class="FitnessApplication.FriendRequests"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="FriendRequests" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="friendRequestViewSource" d:DesignSource="{d:DesignInstance {x:Type local:FriendRequest}, CreateList=True}"/>
+    </Window.Resources>
+    <DataGrid x:Name="friendRequestDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource friendRequestViewSource}}" Margin="297,169,96.6,51" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid.Columns>
+            <DataGridTextColumn x:Name="fromUsernameColumn" Binding="{Binding fromUsername}" Header="From" Width="SizeToHeader"/>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Confirm" Name="Confirm_button" Click="Confirm_button_Clicked"/>
+                    </DataTemplate>
+
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Delete" Name="Delete_button" Click="Delete_button_Clicked"/>
+                    </DataTemplate>
+
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Image Name="ProfilePicture" Source="{Binding Photo}" HorizontalAlignment="Left" Height="1" Margin="85,50,0,0" VerticalAlignment="Top" Width="100"/>
+                    </DataTemplate>
+
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+        </DataGrid.Columns>
+    </DataGrid>
+
+
+</Window>

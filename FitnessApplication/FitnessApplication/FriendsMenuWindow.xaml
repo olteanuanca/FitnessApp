@@ -1,0 +1,56 @@
+﻿<Window x:Class="FitnessApplication.FriendsMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="FriendsMenuWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.429,0.475">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Button Name="FriendList" Content="" HorizontalAlignment="Left" Margin="64,266,0,0" VerticalAlignment="Top" Width="78" Height="83" BorderBrush="White" Click="FriendList_Click">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/SeeFriendsLogo.jpg"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="AddFriend_button" Content="" HorizontalAlignment="Left" Margin="70,86,0,0" VerticalAlignment="Top" Width="67" Height="62" BorderBrush="White" Click="AddFriend_button_Click">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/PlusLogo.png"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Add Friend" HorizontalAlignment="Left" Margin="142,103,0,0" VerticalAlignment="Top" Height="45" Width="136" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold" Background="#00000000" Foreground="#FF3C0963"/>
+        <Button x:Name="Messages_button" Content="" HorizontalAlignment="Left" Margin="70,153,0,0" VerticalAlignment="Top" Width="67" Height="55" Click="Messages_button_Click" RenderTransformOrigin="0.189,0.942" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/MessageLogo.png"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Messages" HorizontalAlignment="Left" Margin="142,170,0,0" VerticalAlignment="Top" Height="38" Width="117" Foreground="#FF3C0963" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="FriendReq_button" Content="" HorizontalAlignment="Left" Margin="70,213,0,0" VerticalAlignment="Top" Width="67" Height="72" Click="FriendReq_button_Click" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/RequestLogo.png"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Friend Requests" HorizontalAlignment="Left" Margin="142,239,0,0" VerticalAlignment="Top" Height="41" Width="177" FontFamily="Times New Roman" FontSize="24" Foreground="#FF3C0963" FontWeight="Bold"/>
+        <Label Content="Friends List" HorizontalAlignment="Left" Margin="147,290,0,0" VerticalAlignment="Top" Height="41" Width="177" FontFamily="Times New Roman" FontSize="24" Foreground="#FF3C0963" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

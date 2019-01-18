@@ -1,0 +1,51 @@
+﻿<Window x:Class="FitnessApplication.NewAccountWindow2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="New Account: Step 2" Height="588.903" Width="804.592">
+    <Grid Margin="0,0,9.4,10.2">
+        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="300" Margin="395,100,0,0" VerticalAlignment="Top" Width="389"/>
+
+        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="467,10,0,0" VerticalAlignment="Top" Width="296"/>
+        <Label Content="Tell us about yourself:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="193" FontFamily="Times New Roman" FontSize="18" FontWeight="Bold" Background="#00000000" Foreground="#FF3F0A59"/>
+        <Label Content="Current Weight:" HorizontalAlignment="Left" Height="27" Margin="7,58,0,0" VerticalAlignment="Top" Width="87" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <Button Name="Countinue_button" Content="Continue" HorizontalAlignment="Left" Margin="17,445,0,0" VerticalAlignment="Top" Width="115" FontFamily="Times New Roman" FontSize="10" BorderBrush="#FF707070" Background="#FFD4A7EE" Height="21" FontWeight="Bold" Click="Countinue_button_Click"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Height="24" Margin="42,76,0,0" VerticalAlignment="Top" Width="52" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <TextBox Name="Height_textbox" HorizontalAlignment="Left" Height="16" Margin="85,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" FontSize="10" FontFamily="Times New Roman"/>
+        <ProgressBar HorizontalAlignment="Left" Height="39" Margin="42,500,0,0" VerticalAlignment="Top" Width="721" Foreground="#FF4E0A96" Value="65"/>
+        <Label Content="Step 2" HorizontalAlignment="Left" Margin="42,476,0,0" VerticalAlignment="Top" Width="81" FontFamily="Times New Roman" RenderTransformOrigin="0.599,3.453"/>
+        <Label Content="Goal Weight:" HorizontalAlignment="Left" Height="27" Margin="19,92,0,0" VerticalAlignment="Top" Width="75" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <TextBox Name="GoalWeight_textbox" HorizontalAlignment="Left" Height="16" Margin="85,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+        <Label Content="Gender:" HorizontalAlignment="Left" Height="24" Margin="42,109,0,0" VerticalAlignment="Top" Width="52" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <Label Content="kg" HorizontalAlignment="Left" Margin="126,58,0,0" VerticalAlignment="Top" Height="22" Width="33" FontFamily="Times New Roman" FontSize="10"/>
+        <Label Content="cm" HorizontalAlignment="Left" Margin="126,74,0,0" VerticalAlignment="Top" Height="22" Width="24" FontFamily="Times New Roman" FontSize="10"/>
+        <RadioButton GroupName="Gender" Name="Male_rbutton" Content="Male" HorizontalAlignment="Left" Margin="85,113,0,0" VerticalAlignment="Top" Height="19" Width="47" FontFamily="Times New Roman"/>
+        <RadioButton GroupName="Gender" Name="Female_rbutton" Content="Female" HorizontalAlignment="Left" Margin="137,113,0,0" VerticalAlignment="Top" Height="19" Width="86" FontFamily="Times New Roman"/>
+        <Label Content="Date of Birth:" HorizontalAlignment="Left" Height="27" Margin="19,132,0,0" VerticalAlignment="Top" Width="87" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold" RenderTransformOrigin="0.626,0.407"/>
+        <Label Content="Location:" HorizontalAlignment="Left" Height="24" Margin="37,151,0,0" VerticalAlignment="Top" Width="75" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <TextBox Name="BirthDate_textbox" HorizontalAlignment="Left" Height="16" Margin="85,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" FontFamily="Times New Roman" FontSize="10"/>
+        <TextBox HorizontalAlignment="Left" Height="16" Margin="85,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"  FontSize="10" FontFamily="Times New Roman"/>
+        <Label Content="How would you describe your normal daily activity?" HorizontalAlignment="Left" Height="27" Margin="7,185,0,0" VerticalAlignment="Top" Width="233" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <RadioButton GroupName="Activity" Name="Sedentary_rbutton" Content="Sedentary: Spend most of the day sitting (e.g. desk job)" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="10"/>
+        <RadioButton GroupName="Activity" Name="LightlyActive_rbutton" Content="Lightly Active: Spend a good part of the day on your feet (e.g. teacher)" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="10"/>
+        <RadioButton GroupName="Activity" Name="Active_rbutton" Content="Active: Spend a good part of the day doing some physical activity (e.g. food server)" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="10"/>
+        <RadioButton GroupName="Activity" Name="VeryActive_rbutton" Content="Very Active: Spend most of the day doing heavy physical activity (e.g. carpenter)" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="10"/>
+        <Label Content="kg" HorizontalAlignment="Left" Margin="126,92,0,0" VerticalAlignment="Top" Height="29" Width="38" FontFamily="Times New Roman" FontSize="10"/>
+        <TextBox Name="StartingWeight_textbox" HorizontalAlignment="Left" Height="16" Margin="85,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" FontFamily="Times New Roman" FontSize="10"/>
+        <Label Content="How many times a week do you plan on exercising?" HorizontalAlignment="Left" Height="27" Margin="10,295,0,0" VerticalAlignment="Top" Width="242" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <TextBox Name="MinutesperWeek_textbox" HorizontalAlignment="Left" Height="16" Margin="13,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" />
+        <Label Content="Workouts/Week" HorizontalAlignment="Left" Margin="60,320,0,0" VerticalAlignment="Top" Height="29" Width="79" FontFamily="Times New Roman" FontSize="10"/>
+        <Label Content="Minutes/Workout" HorizontalAlignment="Left" Margin="60,342,0,0" VerticalAlignment="Top" Height="29" Width="85" FontFamily="Times New Roman" FontSize="10"/>
+        <TextBox Name="WorkoutsperWeek_textbox" HorizontalAlignment="Left" Height="16" Margin="13,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"  FontFamily="Times New Roman" FontSize="10"/>
+        <Label Content="What is your goal? How many kilos do you want to lose?" HorizontalAlignment="Left" Height="27" Margin="10,371,0,0" VerticalAlignment="Top" Width="259" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
+        <TextBox Name="WeeklyGoal_textbox" HorizontalAlignment="Left" Height="16" Margin="13,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"  FontFamily="Times New Roman" FontSize="10"/>
+        <Label Content="/Week" HorizontalAlignment="Left" Margin="60,394,0,0" VerticalAlignment="Top" Height="20" Width="67" FontFamily="Times New Roman" FontSize="10"/>
+       <TextBox Name="CaloriesperWorkout_textbox" HorizontalAlignment="Left" Height="16" Margin="155,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" />
+        <Label Content="Calories/Workout" HorizontalAlignment="Left" Margin="202,327,0,0" VerticalAlignment="Top" Height="29" Width="85" FontFamily="Times New Roman" FontSize="10"/>
+
+
+    </Grid>
+</Window>
