@@ -52,7 +52,7 @@ namespace FitnessApplication
             Account requestInfo = (from c in context.Accounts
                                    where c.Username==selectedRow.fromUsername
                                    select c).SingleOrDefault();
-
+            
             
             var newFriend = new Friend()
            {

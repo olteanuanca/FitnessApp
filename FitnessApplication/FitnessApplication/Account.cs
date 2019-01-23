@@ -24,6 +24,7 @@ namespace FitnessApplication
             this.Accounts_Recipes = new ObservableCollection<Accounts_Recipes>();
             this.Accounts_Cardio = new ObservableCollection<Accounts_Cardio>();
             this.Accounts_Strength = new ObservableCollection<Accounts_Strength>();
+            this.Diaries = new ObservableCollection<Diary>();
         }
     
         public int id_Account { get; set; }
@@ -36,7 +37,6 @@ namespace FitnessApplication
         public string Gender { get; set; }
         public byte[] Photo { get; set; }
         public string Username { get; set; }
-        public int id_Account_Diary { get; set; }
         public int id_Account_Goals { get; set; }
         public int id_Account_AccountCredentials { get; set; }
         public int id_Account_Progress { get; set; }
@@ -56,8 +56,9 @@ namespace FitnessApplication
         public virtual ObservableCollection<Accounts_Cardio> Accounts_Cardio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ObservableCollection<Accounts_Strength> Accounts_Strength { get; set; }
-        public virtual Diary Diary { get; set; }
         public virtual Goal Goal { get; set; }
         public virtual Progress Progress { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ObservableCollection<Diary> Diaries { get; set; }
     }
 }

@@ -1,0 +1,69 @@
+﻿<Window x:Class="FitnessApplication.AddFoodFromRecipes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="AddFoodFromRecipes" Height="380" Width="608">
+    <Grid>
+        <Button Name="DatabaseButton" Click="DatabaseButton_Click" Content="Database" HorizontalAlignment="Left" Margin="61,40,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="MyMealsButton" Click="MyMealsButton_Click" Content="My Meals" HorizontalAlignment="Left" Margin="190,40,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="My Recipes" HorizontalAlignment="Left" Margin="326,40,0,0" VerticalAlignment="Top" Width="75" Opacity="0.5"/>
+        <ComboBox Name="RecipeComboBox" SelectionChanged="RecipeComboBox_SelectionChanged" ItemsSource="{Binding}" SelectedValuePath="id_myRecipe" DisplayMemberPath="Name"  HorizontalAlignment="Left" Margin="77,164,0,0" VerticalAlignment="Top" Width="176" Height="37"/>
+        <Label Content="Choose from Recipes:" HorizontalAlignment="Left" Margin="89,111,0,0" VerticalAlignment="Top" Width="144"/>
+        <Button x:Name="AddButton" Content="Add to Diary" HorizontalAlignment="Left" Margin="190,321,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
+        <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Margin="285,100,0,0" VerticalAlignment="Top" Width="290">
+            <GroupBox Header="" Height="100" VerticalAlignment="Top" Width="285">
+                <Grid Margin="0,0,-13,-0.4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="38*"/>
+                        <ColumnDefinition Width="39*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <TextBlock Text="    Name" Margin="0,0,0.4,0.2"/>
+                    <TextBlock Text="Calories" Margin="1.6,0,3.2,0.2" Grid.Column="1"/>
+                    <TextBlock Text="Carbs" Grid.Column="2" Grid.ColumnSpan="2" Margin="1.8,0,38.4,0.2"/>
+                    <TextBlock Text="Protein" Grid.Column="3" Margin="0.8,0,0.4,0.2"/>
+                    <TextBlock Text="Fiber" Grid.Column="4" Margin="0.6,0,0,0.2"/>
+                    <TextBlock Text="Sugars" Grid.Column="5" Margin="0,0,0.2,0.2"/>
+
+                    <TextBox Name="NameBox" Grid.Row="1" Text=""/>
+                    <TextBox Name="CaloriesBox" Grid.Row="1" Grid.Column="1" Text=""/>
+                    <TextBox Name="CarbsBox" Grid.Row="1" Grid.Column="2"/>
+                    <TextBox Name="ProteinBox" Grid.Row="1" Grid.Column="3"/>
+                    <TextBox Name="FiberBox" Grid.Row="1" Grid.Column="4"/>
+                    <TextBox Name="SugarsBox" Grid.Row="1" Grid.Column="5"/>
+                </Grid>
+
+            </GroupBox>
+        </DockPanel>
+        <ComboBox x:Name="TimeOfDayBox" HorizontalAlignment="Left" Margin="228,235,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Breakfast"/>
+            <ComboBoxItem Content="Lunch"/>
+            <ComboBoxItem Content="Dinner"/>
+            <ComboBoxItem Content="Snack1"/>
+            <ComboBoxItem Content="Snack2"/>
+        </ComboBox>
+        <ComboBox x:Name="ServingsBox" HorizontalAlignment="Left" Margin="228,272,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged_1">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+        <Label Content="Time of the day" HorizontalAlignment="Left" Margin="127,233,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label Content="Servings" HorizontalAlignment="Left" Margin="127,272,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label HorizontalAlignment="Left" Margin="395,279,0,0" VerticalAlignment="Top"/>
+        <Label Content="(1 serving=100g)" HorizontalAlignment="Left" Margin="364,273,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

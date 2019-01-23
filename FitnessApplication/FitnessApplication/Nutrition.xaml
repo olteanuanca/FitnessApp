@@ -1,0 +1,97 @@
+﻿<Window x:Class="FitnessApplication.Nutrition"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="Nutrition" Height="431.73" Width="519.23">
+    <Grid Margin="0,0,3.2,0.8">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="510" Background="#FF741574" Margin="0,0,-0.4,0">
+            <Button x:Name="DiaryExerciseButton" Click="DiaryExerciseButton_Click" Content="Diary Exercise" Margin="210.2,-0.8,203.6,-0.6" Background="#FF893AA9" BorderBrush="#FF3E1568" />
+        </Border>
+        <Button Name="Friends" Content="" Margin="20,0,424.6,349.6" Click="Friends_Click">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///C:/Users/Diana/source/repos/FitnessApp/FriendsLogo.jpeg"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="DiaryFoodButton" Content="Diary Food" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Top" Width="85" Height="52" Click="DiaryFoodButton_Click" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
+        <Button Name="NutritionButton" Content="Nutrition" HorizontalAlignment="Left" Margin="327,0,0,0" VerticalAlignment="Top" Width="88" Height="52" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
+
+
+        <Button Content="Calories" HorizontalAlignment="Left" Margin="143,68,0,0" VerticalAlignment="Top" Width="75">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Name="NutrientsButton" Click="NutrientsButton_Click" Content="Nutrients" HorizontalAlignment="Left" Margin="308,69,0,0" VerticalAlignment="Top" Width="75">
+        </Button>
+        <DatePicker Name="CurrentDate" HorizontalAlignment="Left" Margin="151,106,0,0" VerticalAlignment="Top"/>
+        <ProgressBar Name="BreakfastValue" Minimum="0" Maximum="100" HorizontalAlignment="Left" Height="32" Margin="90,204,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Foreground="#FFEDEE47">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+
+
+
+        <ProgressBar Name="LunchValue" Minimum="0" Maximum="100" HorizontalAlignment="Left" Height="32" Margin="180,203,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Foreground="#FFD9A34F">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar Name="DinnerValue" Minimum="0" Maximum="100" HorizontalAlignment="Left" Height="30" Margin="266,206,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.5,0.5" Foreground="#FFC3550C">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar Name="SnacksValue" Minimum="0" Maximum="100" HorizontalAlignment="Left" Height="30" Margin="358,205,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Foreground="#FFA91A08">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Label Content="Breakfast" HorizontalAlignment="Left" Margin="116,279,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lunch" HorizontalAlignment="Left" Margin="214,279,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dinner" HorizontalAlignment="Left" Margin="292,279,0,0" VerticalAlignment="Top"/>
+        <Label Content="Snacks" HorizontalAlignment="Left" Margin="383,279,0,0" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding ElementName=BreakfastValue, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Left" Margin="131,150,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" RenderTransformOrigin="0.414,0.434"/>
+        <TextBlock Text="{Binding ElementName=LunchValue, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Left" Margin="227,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding ElementName=DinnerValue, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Left" Margin="308,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding ElementName=SnacksValue, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Left" Margin="399,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <Label Content="Total Calories" HorizontalAlignment="Left" Margin="110,331,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Goals" HorizontalAlignment="Left" Margin="114,357,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox Name="GoalsBox" HorizontalAlignment="Left" Height="23" Margin="225,357,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TotalCaloriesBox" HorizontalAlignment="Left" Height="23" Margin="225,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="BreakfastCalories" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="131,305,0,0" Width="29"/>
+        <Label Content="Calories nb.:" HorizontalAlignment="Left" Margin="42,300,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="LunchCalories" HorizontalAlignment="Left" Margin="227,305,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="31"/>
+        <TextBlock Name="DinnerCalories" HorizontalAlignment="Left" Margin="308,304,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="29"/>
+        <TextBlock Name="SnackCalories" HorizontalAlignment="Left" Margin="399,304,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="31"/>
+        <Button Name="LoadButton" Content="Load" Click="LoadButton_Click" HorizontalAlignment="Left" Margin="308,108,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

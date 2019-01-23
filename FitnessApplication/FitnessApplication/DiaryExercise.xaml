@@ -1,0 +1,57 @@
+﻿<Window x:Class="FitnessApplication.DiaryExercise"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="DiaryExercise" Height="700" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="diaryCardioViewSource" d:DesignSource="{d:DesignInstance {x:Type local:DiaryCardio}, CreateList=True}"/>
+        <CollectionViewSource x:Key="diaryStrengthViewSource" d:DesignSource="{d:DesignInstance {x:Type local:DiaryStrength}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid Margin="0,0,3,-2.2" DataContext="{StaticResource diaryCardioViewSource}">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="67" Margin="0,0,-3.4,0" VerticalAlignment="Top" Width="794" Background="#FF741574">
+        </Border>
+        <Button x:Name="DiaryExerciseButton" Content="Diary Exercise" Margin="283,-1,418.6,598.6" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
+       
+        <Button Name="Friends" Content="" Margin="46,0,677.6,605.6" Click="Friends_Click">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///C:/Users/Diana/source/repos/FitnessApp/FriendsLogo.jpeg"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="DiaryFood" Content="Diary Food" HorizontalAlignment="Left" Margin="159,0,0,0" VerticalAlignment="Top" Width="86" Height="67" Background="#FF893AA9" BorderBrush="#FF2C0D38" Click="DiaryFood_Click"/>
+        <Button Name="NutritionButton" Content="Nutrition" Click="NutritionButton_Click" HorizontalAlignment="Left" Margin="416,0,0,0" VerticalAlignment="Top" Width="97" Height="67" Background="#FF893AA9" BorderBrush="#FF2C0D38" />
+
+        <Label Content="Today:" HorizontalAlignment="Left" Margin="184,97,0,0" VerticalAlignment="Top" FontSize="14" Height="29" Width="49"/>
+        <DatePicker x:Name="CurrentDate" HorizontalAlignment="Left" Margin="295,102,0,0" VerticalAlignment="Top" Height="24" Width="102" />
+        <Button HorizontalAlignment="Left" Margin="437,102,0,0" VerticalAlignment="Top" Width="76" Height="22">
+            <Button x:Name="LoadButton" Content="Load" Width="75" Click="LoadButton_Click" RenderTransformOrigin="0.632,-1.164"/>
+        </Button>
+        <DataGrid x:Name="diaryCardioDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="162,173,145.6,402.6" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="cardio_DescriptionColumn" Binding="{Binding Cardio_Description}" Header="Cardio Description" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="calories_burnedColumn" Binding="{Binding Calories_burned}" Header="Calories burned" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="duration_minColumn" Binding="{Binding Duration_min}" Header="Duration min" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="diaryStrengthDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource diaryStrengthViewSource}}" Margin="162,312,145.6,253.6" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="strength_DescriptionColumn" Binding="{Binding Strength_Description}" Header="Strength Description" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="calories_burnedColumn1" Binding="{Binding Calories_burned}" Header="Calories burned" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="nbOfSetsColumn" Binding="{Binding NbOfSets}" Header="Nb Of Sets" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="repsPerSetColumn" Binding="{Binding RepsPerSet}" Header="Reps Per Set" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="weightPerRepColumn" Binding="{Binding WeightPerRep}" Header="Weight Per Rep" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Cardio" HorizontalAlignment="Left" Margin="28,201,0,0" VerticalAlignment="Top" Height="29" Width="99" FontSize="16"/>
+        <Label Content="Strength" HorizontalAlignment="Left" Margin="28,355,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.537,0.137" FontSize="16"/>
+        <Button x:Name="AddCardioButton" Content="Add Cardio&#xD;&#xA; Exercise" FontSize="14" HorizontalAlignment="Left" Margin="673,199,0,0" VerticalAlignment="Top" Width="95" Height="45" Click="AddCardioButton_Click" />
+        <Button x:Name="AddStrengthButton" Content="Add Strength&#xA; Exercise" FontSize="14" HorizontalAlignment="Left" Margin="673,340,0,0" VerticalAlignment="Top" Width="95" Height="47" Click="AddStrengthButton_Click"/>
+
+    </Grid>
+</Window>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AuthentificationWindow" Height="450" Width="800">
     <Grid Background="White" Margin="3,0,0,0">
-        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="349,88,-73.4,0" VerticalAlignment="Top" Width="515"/>
+        <Image Source="C:\Users\Diana\source\repos\FitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="349,88,-73.4,0" VerticalAlignment="Top" Width="515"/>
         <TextBox Name="Username_textbox" HorizontalAlignment="Left" Height="35" Margin="234,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" FontFamily="Times New Roman" FontSize="14"/>
         <Label Name="login_label" Content="Member Login" HorizontalAlignment="Left" Margin="226,167,0,0" VerticalAlignment="Top" Height="32" Width="168" FontFamily="Times New Roman" FontSize="18" Foreground="#FF500874" Background="#00000000" FontWeight="Bold"/>
         <Button Name="LogIn_button" Content="Log In" HorizontalAlignment="Left" Margin="234,306,0,0" VerticalAlignment="Top" Width="72" Height="22" Background="#FFC29BC7" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold" Click="LogIn_button_Click"/>

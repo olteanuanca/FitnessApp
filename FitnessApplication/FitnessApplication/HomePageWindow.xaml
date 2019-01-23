@@ -8,15 +8,23 @@
         Title="HomePageWindow" Height="450" Width="800">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="74" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF741574">
-            <Button Name="Friends" Content="" Margin="51.2,-0.8,668.8,0.8" Click="Friends_Click">
-                <Button.Background>
-                    <ImageBrush>
-                        <ImageBrush.ImageSource>
-                            <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/FriendsLogo.jpeg"/>
-                        </ImageBrush.ImageSource>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
         </Border>
+        <Button x:Name="DiaryExercise" Content="Diary Exercise" Margin="255,-1,447.6,337" Click="DiaryExercise_Click" Background="#FF893AA9" BorderBrush="#FF3E1568"/>
+        
+        <Button Name="Friends" Content="" Margin="33,0,685.6,337" Click="Friends_Click">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///C:/Users/Diana/source/repos/FitnessApp/FriendsLogo.jpeg"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="DiaryFood" Content="Diary Food" HorizontalAlignment="Left" Margin="148,0,0,0" VerticalAlignment="Top" Width="87" Height="74" Click="DiaryFood_Click" Background="#FF893AA9" BorderBrush="#FF3E1568"/>
+        <Button Name="NutritionButton" Content="Nutrition" Click="NutritionButton_Click" HorizontalAlignment="Left" Margin="370,0,0,0" VerticalAlignment="Top" Width="86" Background="#FF893AA9" BorderBrush="#FF3E1568" Height="74"/>
+
+
+
+
     </Grid>
 </Window>

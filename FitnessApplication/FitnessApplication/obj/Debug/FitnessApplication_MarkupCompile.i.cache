@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\BAZE DE DATE\FitnessApplication\FitnessApplication\obj\Debug\
+C:\Users\Diana\source\repos\FitnessApp\FitnessApplication\FitnessApplication\obj\Debug\
 FitnessApplication
 none
 false
 DEBUG;TRACE
-D:\BAZE DE DATE\FitnessApplication\FitnessApplication\App.xaml
-14-1781878179
+C:\Users\Diana\source\repos\FitnessApp\FitnessApplication\FitnessApplication\App.xaml
+26-1661118886
 2388864501
-6978750430
-23987582236
-AddFriends.xaml;AuthentificationWindow.xaml;ChangePasswordWindow.xaml;ForgotPasswordWindow.xaml;FriendMessages.xaml;FriendRequests.xaml;FriendsList.xaml;FriendsMenuWindow.xaml;HomePageWindow.xaml;MainWindow.xaml;NewAccountWindow1.xaml;NewAccountWindow2.xaml;NewAccountWindow3.xaml;UserControls\Menu.xaml;
+82797794910
+231888635799
+AddCardioExercise.xaml;AddFoodDialog.xaml;AddFoodFromMealsDialog.xaml;AddFoodFromRecipes.xaml;AddFriends.xaml;AddFromMyCardio.xaml;AddFromMyStrength.xaml;AddStrengthExercise.xaml;AddWater.xaml;AuthentificationWindow.xaml;ChangePasswordWindow.xaml;DiaryExercise.xaml;DiaryFood.xaml;ForgotPasswordWindow.xaml;FriendMessages.xaml;FriendRequests.xaml;FriendsList.xaml;FriendsMenuWindow.xaml;HomePageWindow.xaml;MainWindow.xaml;NewAccountWindow1.xaml;NewAccountWindow2.xaml;NewAccountWindow3.xaml;Nutrients.xaml;Nutrition.xaml;UserControls\Menu.xaml;
 
-False
+True
 
