@@ -5,6 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessApplication"
         mc:Ignorable="d"
-        Title="FriendMessages" Height="450" Width="800">
-    <Grid/>
+        Title="FriendMessages" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="friendMessageViewSource" d:DesignSource="{d:DesignInstance {x:Type local:FriendMessage}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource friendMessageViewSource}">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="74" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF741574">
+            <Button Name="Friends" Content="" Margin="310.2,-0.8,416.8,8.8" Click="Friends_Click">
+                <Button.Background>
+                    <ImageBrush>
+                        <ImageBrush.ImageSource>
+                            <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/FriendsLogo.jpeg"/>
+                        </ImageBrush.ImageSource>
+                    </ImageBrush>
+                </Button.Background>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Border>
+        <DataGrid x:Name="friendMessageDataGrid" ItemsSource="{Binding Source={StaticResource friendMessageViewSource}}" AutoGenerateColumns="False" EnableRowVirtualization="True" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="0,64,-0.4,0" Background="#FFEBD8EB" RowBackground="#FFEBD8EB" AlternatingRowBackground="#FFF6C7F6" FontFamily="Times New Roman" FontSize="14" GridLinesVisibility="Horizontal">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn x:Name="fromUsernameColumn" Binding="{Binding fromUsername}" Header="From" Width="200"/>
+                <DataGridTextColumn x:Name="messageColumn" Binding="{Binding Message}" Header="Message" Width="500"/>
+                <DataGridTemplateColumn Width="86">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" x:Name="Delete_button" Click="Delete_button_Clicked" Background="#FFD4A7EE" FontWeight="Bold" FontFamily="Times New Roman" FontSize="10"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="Food" Content="" HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Top" Width="72" Click="Food_Click" Height="63">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="D:\Repo\FoodLogo.png"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
 </Window>

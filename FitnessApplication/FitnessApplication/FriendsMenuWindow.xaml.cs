@@ -50,5 +50,38 @@ namespace FitnessApplication
             FriendsList friendList = new FriendsList();
             friendList.Show();
         }
+
+        private void Friends_Click(object sender, RoutedEventArgs e)
+        {
+            FriendsMenuWindow friends = new FriendsMenuWindow();
+            friends.Show();
+            this.Close();
+        }
+
+        private void Send_button_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new MyFitEntities();
+
+            var newMsg = new FriendMessage()
+            {
+                fromUsername = AuthentificationWindow.currentUsername,
+                toUsername = ToUsername_TB.Text,
+                Message=Message_TB.Text,
+            };
+
+
+            context.FriendMessages.Add(newMsg);
+            context.SaveChanges();
+
+            ToUsername_TB.Clear();
+            Message_TB.Clear();
+       
+        }
+        private void Food_Click(object sender, RoutedEventArgs e)
+        {
+            Recipes window = new Recipes();
+            window.Show();
+
+        }
     }
 }

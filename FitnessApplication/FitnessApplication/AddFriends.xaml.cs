@@ -34,7 +34,22 @@ namespace FitnessApplication
 
             context.FriendRequests.Add(newFriend);
             context.SaveChanges();
+
             this.Close();
+        }
+
+        private void Friends_Click(object sender, RoutedEventArgs e)
+        {
+            FriendsMenuWindow friends = new FriendsMenuWindow();
+            friends.Show();
+            this.Close();
+        }
+
+        private void Food_Click(object sender, RoutedEventArgs e)
+        {
+            Recipes window = new Recipes();
+            window.Show();
+
         }
     }
 }

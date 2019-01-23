@@ -7,25 +7,27 @@
         mc:Ignorable="d"
         Title="New Account: Step 1" Height="450" Width="800">
     <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="223,133,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+
         <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="300" Margin="348,92,0,0" VerticalAlignment="Top" Width="389"/>
 
         <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="273,10,0,0" VerticalAlignment="Top" Width="296"/>
         <Label Content="Create new account:" HorizontalAlignment="Left" Margin="27,55,0,0" VerticalAlignment="Top" Height="28" Width="162" FontFamily="Times New Roman" FontSize="18" FontWeight="Bold" Background="#00000000" Foreground="#FF3F0A59"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Height="34" Margin="27,76,0,0" VerticalAlignment="Top" Width="105" FontFamily="Times New Roman" RenderTransformOrigin="0.51,0.517"/>
-        <TextBox Name="EmailAdress_textbox" HorizontalAlignment="Left" Height="19" Margin="27,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
-        <Button Name="Continue_button" Content="Continue" HorizontalAlignment="Left" Margin="27,321,0,0" VerticalAlignment="Top" Width="115" FontFamily="Times New Roman" FontSize="10" BorderBrush="#FF707070" Background="#FFD4A7EE" Height="21" FontWeight="Bold" Click="Continue_button_Click"/>
+        <TextBox x:Name="EmailAdress_textbox" HorizontalAlignment="Left" Height="19" Margin="27,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <Button x:Name="Continue_button" Content="Continue" HorizontalAlignment="Left" Margin="27,271,0,0" VerticalAlignment="Top" Width="115" FontFamily="Times New Roman" FontSize="10" BorderBrush="#FF707070" Background="#FFD4A7EE" Height="21" FontWeight="Bold" Click="Continue_button_Click"/>
         <Label Content="Password:" HorizontalAlignment="Left" Height="21" Margin="27,226,0,0" VerticalAlignment="Top" Width="96" FontFamily="Times New Roman"/>
-        <TextBox Name="Password_textbox" HorizontalAlignment="Left" Height="19" Margin="27,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="Password_textbox" HorizontalAlignment="Left" Height="19" Margin="27,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
         <ProgressBar HorizontalAlignment="Left" Height="39" Margin="42,371,0,0" VerticalAlignment="Top" Width="721" Foreground="#FF4E0A96" Value="35"/>
         <Label Content="Step 1" HorizontalAlignment="Left" Margin="42,347,0,0" VerticalAlignment="Top" Width="81" FontFamily="Times New Roman"/>
         <Label Content="Email Adress:" HorizontalAlignment="Left" Height="31" Margin="27,153,0,0" VerticalAlignment="Top" Width="86" FontFamily="Times New Roman"/>
-        <TextBox Name="FirstName_textbox" HorizontalAlignment="Left" Height="20" Margin="27,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" />
+        <TextBox x:Name="FirstName_textbox" HorizontalAlignment="Left" Height="20" Margin="27,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" />
         <Label Content="Last Name:" HorizontalAlignment="Left" Height="32" Margin="27,116,0,0" VerticalAlignment="Top" Width="96" FontFamily="Times New Roman"/>
-        <TextBox Name="LastName_textbox" HorizontalAlignment="Left" Height="20" Margin="27,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="LastName_textbox" HorizontalAlignment="Left" Height="20" Margin="27,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
         <Label Content="Username:" HorizontalAlignment="Left" Height="22" Margin="27,189,0,0" VerticalAlignment="Top" Width="63" FontFamily="Times New Roman"/>
-        <TextBox Name="Username_textbox" HorizontalAlignment="Left" Height="20" Margin="27,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
-        <Image Name="ProfilePic" HorizontalAlignment="Left" Height="100" Margin="205,127,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Name="Browse_button" Content="Browse Profile Picture" HorizontalAlignment="Left" Margin="27,280,0,0" VerticalAlignment="Top" Width="161" Click="Browse_button_Click"/>
+        <Image x:Name="ProfilePic" HorizontalAlignment="Left" Height="100" Margin="223,133,0,0" VerticalAlignment="Top" Width="100" OpacityMask="Black"/>
+        <TextBox x:Name="Username_textbox" HorizontalAlignment="Left" Height="20" Margin="27,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <Button x:Name="Browse_button" Content="Browse Profile Picture" HorizontalAlignment="Left" Margin="215,238,0,0" VerticalAlignment="Top" Width="118" Click="Browse_button_Click" Background="#FFD4A7EE" FontWeight="Bold" FontFamily="Times New Roman" FontSize="10"/>
 
     </Grid>
 </Window>

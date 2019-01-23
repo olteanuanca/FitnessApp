@@ -104,6 +104,12 @@
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ChangePasswordWindow.xaml.cs" />
+    <Compile Include="CreateMeal.xaml.cs">
+      <DependentUpon>CreateMeal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateRecipe.xaml.cs">
+      <DependentUpon>CreateRecipe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Diary.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
@@ -177,6 +183,9 @@
     <Compile Include="MealGoal.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Meals.xaml.cs">
+      <DependentUpon>Meals.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyCardio.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
@@ -203,6 +212,9 @@
     </Compile>
     <Compile Include="Progress.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Recipes.xaml.cs">
+      <DependentUpon>Recipes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reminder.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
@@ -233,6 +245,14 @@
     <Page Include="ChangePasswordWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateMeal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateRecipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ForgotPasswordWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -280,6 +300,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Meals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NewAccountWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -291,6 +315,10 @@
     <Page Include="NewAccountWindow3.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Recipes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Menu.xaml">
       <SubType>Designer</SubType>
@@ -324,8 +352,11 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Account.datasource" />
+    <None Include="Properties\DataSources\Friend.datasource" />
     <None Include="Properties\DataSources\FriendMessage.datasource" />
     <None Include="Properties\DataSources\FriendRequest.datasource" />
+    <None Include="Properties\DataSources\MyMeal.datasource" />
+    <None Include="Properties\DataSources\MyRecipe.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -7,37 +7,62 @@
         mc:Ignorable="d"
         Title="FriendRequests" Height="450" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
+
         <CollectionViewSource x:Key="friendRequestViewSource" d:DesignSource="{d:DesignInstance {x:Type local:FriendRequest}, CreateList=True}"/>
+       
     </Window.Resources>
-    <DataGrid x:Name="friendRequestDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource friendRequestViewSource}}" Margin="297,169,96.6,51" RowDetailsVisibilityMode="VisibleWhenSelected">
+    <Grid>
+    <DataGrid x:Name="friendRequestDataGrid" ItemsSource="{Binding Source={StaticResource friendRequestViewSource}}" AutoGenerateColumns="False" EnableRowVirtualization="True" RowDetailsVisibilityMode="VisibleWhenSelected" DisplayMemberPath="Photo" Background="#FFEBD8EB" RowBackground="#FFEBD8EB" AlternatingRowBackground="#FFF6C7F6" GridLinesVisibility="Horizontal" FontSize="14" FontFamily="Times New Roman" Margin="0,71,-0.4,0">
         <DataGrid.Columns>
-            <DataGridTextColumn x:Name="fromUsernameColumn" Binding="{Binding fromUsername}" Header="From" Width="SizeToHeader"/>
-            <DataGridTemplateColumn>
+            <DataGridTextColumn x:Name="fromUsernameColumn" Binding="{Binding fromUsername}" Header="From" Width="400"/>
+            <DataGridTemplateColumn Width="190">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                        <Button Content="Confirm" Name="Confirm_button" Click="Confirm_button_Clicked"/>
+                        <Button Content="Confirm" x:Name="Confirm_button" Click="Confirm_button_Clicked" Background="#FFD4A7EE" FontWeight="Bold" FontFamily="Times New Roman" FontSize="10"/>
                     </DataTemplate>
-
                 </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
-            <DataGridTemplateColumn>
+            <DataGridTemplateColumn Width="196">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                        <Button Content="Delete" Name="Delete_button" Click="Delete_button_Clicked"/>
+                        <Button Content="Delete" x:Name="Delete_button" Click="Delete_button_Clicked" Background="#FFD4A7EE" FontWeight="Bold" FontFamily="Times New Roman" FontSize="10"/>
                     </DataTemplate>
-
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
-            <DataGridTemplateColumn>
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <Image Name="ProfilePicture" Source="{Binding Photo}" HorizontalAlignment="Left" Height="1" Margin="85,50,0,0" VerticalAlignment="Top" Width="100"/>
-                    </DataTemplate>
-
                 </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
         </DataGrid.Columns>
     </DataGrid>
+    
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="74" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF741574">
+        <Button Name="Friends" Content="" Margin="310.2,-0.8,416.8,8.8" Click="Friends_Click">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/FriendsLogo.jpeg"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
 
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
+    </Border>
+    <Button Name="Food" Content="" HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Top" Width="72" Click="Food_Click" Height="63">
+        <Button.Background>
+            <ImageBrush>
+                <ImageBrush.ImageSource>
+                    <BitmapImage UriSource="D:\Repo\FoodLogo.png"/>
+                </ImageBrush.ImageSource>
+            </ImageBrush>
+        </Button.Background>
+    </Button>
+    </Grid>
 </Window>

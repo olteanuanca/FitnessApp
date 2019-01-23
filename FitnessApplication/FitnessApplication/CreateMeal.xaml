@@ -1,0 +1,47 @@
+﻿<Window x:Class="FitnessApplication.CreateMeal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="CreateMeal" Height="450" Width="800">
+    <Grid>
+        <Grid Background="#FFEDCCED" Margin="0,0,-0.4,0">
+            <Rectangle Fill="#FF97256B" HorizontalAlignment="Left" Height="64" Stroke="Black" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
+            <Label Content="My Recipes" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" Height="54" Width="194" Foreground="#FF462046" FontFamily="Times New Roman" FontSize="36" Background="#00000000" OpacityMask="#FFCAA8A8" BorderBrush="#FF5D5656"/>
+            <Label Content="My Meals" HorizontalAlignment="Left" Margin="515,10,0,0" VerticalAlignment="Top" Height="54" Width="194" Foreground="#FFDCC9ED" FontFamily="Times New Roman" FontSize="36" Background="#00000000"/>
+            <Button Name="Save_button" Content="Add Meal" HorizontalAlignment="Left" Margin="0,383,0,0" VerticalAlignment="Top" Width="794" Background="#FFDDA9DD" FontFamily="Times New Roman" Click="Add_button_Click" Height="36"/>
+            <Label Content="Name" HorizontalAlignment="Left" Margin="107,68,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Name_TB" HorizontalAlignment="Left" Height="23" Margin="166,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Calories/Serving" HorizontalAlignment="Left" Margin="53,109,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Calories_TB" HorizontalAlignment="Left" Height="23" Margin="166,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Carbs" HorizontalAlignment="Left" Margin="540,274,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Carbs_TB" HorizontalAlignment="Left" Height="23" Margin="636,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Protein" HorizontalAlignment="Left" Margin="281,321,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Protein_TB" HorizontalAlignment="Left" Height="23" Margin="382,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Fat" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Fat_TB" HorizontalAlignment="Left" Height="23" Margin="127,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Cholesterol" HorizontalAlignment="Left" Margin="540,321,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Ch_TB" HorizontalAlignment="Left" Height="23" Margin="636,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Sodium" HorizontalAlignment="Left" Margin="281,277,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Sodium_TB" HorizontalAlignment="Left" Height="23" Margin="382,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Potassium" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Potassium_TB" HorizontalAlignment="Left" Height="23" Margin="127,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Fiber" HorizontalAlignment="Left" Margin="540,234,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Fiber_TB" HorizontalAlignment="Left" Height="23" Margin="636,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Sugars" HorizontalAlignment="Left" Margin="281,235,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Sugars_TB" HorizontalAlignment="Left" Height="23" Margin="382,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Vitamin A" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="VitA_TB" HorizontalAlignment="Left" Height="23" Margin="127,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Vitamin C" HorizontalAlignment="Left" Margin="535,187,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="VitC" HorizontalAlignment="Left" Height="23" Margin="636,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Calcium" HorizontalAlignment="Left" Margin="281,183,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Calcium_TB" HorizontalAlignment="Left" Height="23" Margin="382,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Iron" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="Iron_TB" HorizontalAlignment="Left" Height="23" Margin="127,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Image Name="Pic" HorizontalAlignment="Left" Height="70" Margin="421,84,0,0" VerticalAlignment="Top" Width="81" OpacityMask="#FF2C2A2A"/>
+            <Button Name="browse_btn" Content="Browse Photo" HorizontalAlignment="Left" Margin="535,108,0,0" VerticalAlignment="Top" Width="86" Background="#FFD1A9D1" Click="browse_btn_Click"/>
+        </Grid>
+    </Grid>
+</Window>

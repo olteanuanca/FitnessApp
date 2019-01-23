@@ -18,7 +18,7 @@
         <ProgressBar HorizontalAlignment="Left" Height="39" Margin="42,500,0,0" VerticalAlignment="Top" Width="721" Foreground="#FF4E0A96" Value="65"/>
         <Label Content="Step 2" HorizontalAlignment="Left" Margin="42,476,0,0" VerticalAlignment="Top" Width="81" FontFamily="Times New Roman" RenderTransformOrigin="0.599,3.453"/>
         <Label Content="Goal Weight:" HorizontalAlignment="Left" Height="27" Margin="19,92,0,0" VerticalAlignment="Top" Width="75" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
-        <TextBox Name="GoalWeight_textbox" HorizontalAlignment="Left" Height="16" Margin="85,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+        <TextBox Name="GoalWeight_textbox" HorizontalAlignment="Left" Height="16" Margin="85,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="10" Width="41"/>
         <Label Content="Gender:" HorizontalAlignment="Left" Height="24" Margin="42,109,0,0" VerticalAlignment="Top" Width="52" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
         <Label Content="kg" HorizontalAlignment="Left" Margin="126,58,0,0" VerticalAlignment="Top" Height="22" Width="33" FontFamily="Times New Roman" FontSize="10"/>
         <Label Content="cm" HorizontalAlignment="Left" Margin="126,74,0,0" VerticalAlignment="Top" Height="22" Width="24" FontFamily="Times New Roman" FontSize="10"/>
@@ -36,14 +36,14 @@
         <Label Content="kg" HorizontalAlignment="Left" Margin="126,92,0,0" VerticalAlignment="Top" Height="29" Width="38" FontFamily="Times New Roman" FontSize="10"/>
         <TextBox Name="StartingWeight_textbox" HorizontalAlignment="Left" Height="16" Margin="85,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" FontFamily="Times New Roman" FontSize="10"/>
         <Label Content="How many times a week do you plan on exercising?" HorizontalAlignment="Left" Height="27" Margin="10,295,0,0" VerticalAlignment="Top" Width="242" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
-        <TextBox Name="MinutesperWeek_textbox" HorizontalAlignment="Left" Height="16" Margin="13,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" />
+        <TextBox Name="MinutesperWeek_textbox" HorizontalAlignment="Left" Height="16" Margin="13,343,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="10" VerticalAlignment="Top" Width="41" />
         <Label Content="Workouts/Week" HorizontalAlignment="Left" Margin="60,320,0,0" VerticalAlignment="Top" Height="29" Width="79" FontFamily="Times New Roman" FontSize="10"/>
         <Label Content="Minutes/Workout" HorizontalAlignment="Left" Margin="60,342,0,0" VerticalAlignment="Top" Height="29" Width="85" FontFamily="Times New Roman" FontSize="10"/>
         <TextBox Name="WorkoutsperWeek_textbox" HorizontalAlignment="Left" Height="16" Margin="13,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"  FontFamily="Times New Roman" FontSize="10"/>
         <Label Content="What is your goal? How many kilos do you want to lose?" HorizontalAlignment="Left" Height="27" Margin="10,371,0,0" VerticalAlignment="Top" Width="259" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
         <TextBox Name="WeeklyGoal_textbox" HorizontalAlignment="Left" Height="16" Margin="13,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"  FontFamily="Times New Roman" FontSize="10"/>
         <Label Content="/Week" HorizontalAlignment="Left" Margin="60,394,0,0" VerticalAlignment="Top" Height="20" Width="67" FontFamily="Times New Roman" FontSize="10"/>
-       <TextBox Name="CaloriesperWorkout_textbox" HorizontalAlignment="Left" Height="16" Margin="155,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" />
+        <TextBox Name="CaloriesperWorkout_textbox" HorizontalAlignment="Left" Height="16" Margin="155,328,0,0" FontFamily="Times New Roman" FontSize="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" />
         <Label Content="Calories/Workout" HorizontalAlignment="Left" Margin="202,327,0,0" VerticalAlignment="Top" Height="29" Width="85" FontFamily="Times New Roman" FontSize="10"/>
 
 

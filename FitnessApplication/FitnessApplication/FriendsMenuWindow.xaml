@@ -7,10 +7,30 @@
         mc:Ignorable="d"
         Title="FriendsMenuWindow" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.429,0.475">
-        <Grid.Background>
-            <ImageBrush/>
-        </Grid.Background>
-        <Button Name="FriendList" Content="" HorizontalAlignment="Left" Margin="64,266,0,0" VerticalAlignment="Top" Width="78" Height="83" BorderBrush="White" Click="FriendList_Click">
+        <Rectangle Fill="#FFF6D5F6" HorizontalAlignment="Left" Height="346" Margin="0,74,0,0" VerticalAlignment="Top" Width="278"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="74" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF741574">
+            <Button x:Name="Friends" Content="" Margin="310.2,-0.8,416.8,8.8" Click="Friends_Click">
+                <Button.Background>
+                    <ImageBrush>
+                        <ImageBrush.ImageSource>
+                            <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/FriendsLogo.jpeg"/>
+                        </ImageBrush.ImageSource>
+                    </ImageBrush>
+                </Button.Background>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Border>
+        <Button x:Name="FriendList" Content="" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Width="67" Height="64" BorderBrush="White" Click="FriendList_Click">
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
@@ -18,9 +38,19 @@
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
-        <Button x:Name="AddFriend_button" Content="" HorizontalAlignment="Left" Margin="70,86,0,0" VerticalAlignment="Top" Width="67" Height="62" BorderBrush="White" Click="AddFriend_button_Click">
+        <Button x:Name="AddFriend_button" Content="" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="67" Height="62" BorderBrush="White" Click="AddFriend_button_Click">
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
@@ -28,9 +58,19 @@
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Label Content="Add Friend" HorizontalAlignment="Left" Margin="142,103,0,0" VerticalAlignment="Top" Height="45" Width="136" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold" Background="#00000000" Foreground="#FF3C0963"/>
-        <Button x:Name="Messages_button" Content="" HorizontalAlignment="Left" Margin="70,153,0,0" VerticalAlignment="Top" Width="67" Height="55" Click="Messages_button_Click" RenderTransformOrigin="0.189,0.942" BorderBrush="White">
+        <Label Content="Add Friend" HorizontalAlignment="Left" Margin="88,103,0,0" VerticalAlignment="Top" Height="45" Width="136" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold" Background="#00000000" Foreground="#FF3C0963"/>
+        <Button x:Name="Messages_button" Content="" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="67" Height="55" Click="Messages_button_Click" RenderTransformOrigin="0.189,0.942" BorderBrush="White">
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
@@ -38,9 +78,19 @@
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Label Content="Messages" HorizontalAlignment="Left" Margin="142,170,0,0" VerticalAlignment="Top" Height="38" Width="117" Foreground="#FF3C0963" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="FriendReq_button" Content="" HorizontalAlignment="Left" Margin="70,213,0,0" VerticalAlignment="Top" Width="67" Height="72" Click="FriendReq_button_Click" BorderBrush="White">
+        <Label Content="Messages" HorizontalAlignment="Left" Margin="88,170,0,0" VerticalAlignment="Top" Height="38" Width="117" Foreground="#FF3C0963" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="FriendReq_button" Content="" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="67" Height="72" Click="FriendReq_button_Click" BorderBrush="White">
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
@@ -48,9 +98,33 @@
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Margin="0,0,-0.8,13">
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Label Content="Friend Requests" HorizontalAlignment="Left" Margin="142,239,0,0" VerticalAlignment="Top" Height="41" Width="177" FontFamily="Times New Roman" FontSize="24" Foreground="#FF3C0963" FontWeight="Bold"/>
-        <Label Content="Friends List" HorizontalAlignment="Left" Margin="147,290,0,0" VerticalAlignment="Top" Height="41" Width="177" FontFamily="Times New Roman" FontSize="24" Foreground="#FF3C0963" FontWeight="Bold"/>
-
+        <Label Content="Friend Requests" HorizontalAlignment="Left" Margin="88,221,0,0" VerticalAlignment="Top" Height="41" Width="177" FontFamily="Times New Roman" FontSize="24" Foreground="#FF3C0963" FontWeight="Bold"/>
+        <Label Content="Friends List" HorizontalAlignment="Left" Margin="93,279,0,0" VerticalAlignment="Top" Height="41" Width="177" FontFamily="Times New Roman" FontSize="24" Foreground="#FF3C0963" FontWeight="Bold"/>
+        <TextBox Name="Message_TB"  FontFamily="Times New Roman" FontSize="15" HorizontalAlignment="Left" Height="114" Margin="319,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323"/>
+        <Button x:Name="Send_button" Content="Send" HorizontalAlignment="Left" Margin="319,369,0,0" VerticalAlignment="Top" Width="115" FontFamily="Times New Roman" FontSize="10" BorderBrush="#FF707070" Background="#FFD4A7EE" Height="21" FontWeight="Bold" Click="Send_button_Click"/>
+        <TextBox Name="ToUsername_TB" HorizontalAlignment="Left" Height="23" Margin="319,170,0,0" TextWrapping="Wrap"  FontFamily="Times New Roman" FontSize="15" VerticalAlignment="Top" Width="120"/>
+        <Label Content="To:" HorizontalAlignment="Left" Margin="319,144,0,0" VerticalAlignment="Top"  FontFamily="Times New Roman" FontSize="15"/>
+        <Label Content="Message" HorizontalAlignment="Left" Margin="319,208,0,0" VerticalAlignment="Top"  FontFamily="Times New Roman" FontSize="15"/>
+        <Label Content="Keep in touch with your friends.&#xD;&#xA;Send them a message:" HorizontalAlignment="Left" Margin="319,74,0,0"  FontFamily="Times New Roman" FontSize="23" VerticalAlignment="Top" Height="70" Width="419" FontWeight="Bold" Foreground="Purple"/>
+        <Button Name="Food" Content="" HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Top" Width="72" Click="Food_Click" Height="63">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="D:\Repo\FoodLogo.png"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

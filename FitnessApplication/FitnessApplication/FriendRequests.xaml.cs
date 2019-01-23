@@ -24,20 +24,24 @@ namespace FitnessApplication
     {
         MyFitEntities context = new MyFitEntities();
         CollectionViewSource friendRequestViewSource;
+       
         public FriendRequests()
         {
             InitializeComponent();
             friendRequestViewSource = ((CollectionViewSource)(FindResource("friendRequestViewSource")));
+          
             DataContext = this;
 
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-         
+           
             context.FriendRequests.Where(c => c.toUsername == AuthentificationWindow.currentUsername).Load();
-          
+
             friendRequestViewSource.Source = context.FriendRequests.Local;
+         
+            
         }
 
         private void Confirm_button_Clicked(object sender, RoutedEventArgs e)
@@ -115,7 +119,19 @@ namespace FitnessApplication
 
         }
 
+        private void Friends_Click(object sender, RoutedEventArgs e)
+        {
+            FriendsMenuWindow friends = new FriendsMenuWindow();
+            friends.Show();
+            this.Close();
+        }
 
+        private void Food_Click(object sender, RoutedEventArgs e)
+        {
+            Recipes window = new Recipes();
+            window.Show();
+
+        }
 
     }
 }

@@ -30,5 +30,12 @@ namespace FitnessApplication
             friends.Show();
             this.Close();
         }
+
+        private void Food_Click(object sender, RoutedEventArgs e)
+        {
+            Recipes window = new Recipes();
+            window.Show();
+
+        }
     }
 }

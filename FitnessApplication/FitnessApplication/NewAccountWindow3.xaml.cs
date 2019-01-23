@@ -30,7 +30,7 @@ namespace FitnessApplication
 
             if (check==null)
             {
-                MessageBox.Show($"Your friend with this email {friend1_textbox.Text} doesn't have an account! Please invite him to join us and then add him/her as a friend!");
+               // MessageBox.Show($"Your friend with this email {friend1_textbox.Text} doesn't have an account! Please invite him to join us and then add him/her as a friend!");
             }
             else
             {
@@ -47,7 +47,7 @@ namespace FitnessApplication
             var check2 = (from c in context.AccountCredentials where c.AccEmail == friend2_textbox.Text select c).FirstOrDefault();
             if (check2 == null)
             {
-                MessageBox.Show($"Your friend with this email {friend2_textbox.Text} doesn't have an account! Please invite him to join us and then add him/her as a friend!");
+              //  MessageBox.Show($"Your friend with this email {friend2_textbox.Text} doesn't have an account! Please invite him to join us and then add him/her as a friend!");
             }
             else
             {
@@ -67,7 +67,7 @@ namespace FitnessApplication
 
             if (check3 == null)
             {
-                MessageBox.Show($"Your friend with this email {friend3_textbox.Text} doesn't have an account! Please invite him to join us and then add him/her as a friend!");
+              //  MessageBox.Show($"Your friend with this email {friend3_textbox.Text} doesn't have an account! Please invite him to join us and then add him/her as a friend!");
             }
             else
             {
