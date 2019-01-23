@@ -40,6 +40,27 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.WPF, Version=16.4460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.WPF.16.4.0.47\lib\net46\Syncfusion.Grid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.WPF, Version=16.4460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.GridCommon.WPF.16.4.0.47\lib\net46\Syncfusion.GridCommon.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=16.4460.0.47, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.16.4.0.47\lib\net46\_PublishedWebsites\Syncfusion.EJ_2015\bin\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.Base, Version=16.4460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Linq.Base.16.4.0.47\lib\net46\Syncfusion.Linq.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=16.4460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.16.4.0.47\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -48,8 +69,13 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,9 +85,14 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="wpftoolkit">
+      <HintPath>..\..\..\C#\WpfChartControl\bin\Debug\wpftoolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -96,9 +127,22 @@
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AddFriends.xaml.cs" />
+    <Compile Include="AddMyCardio.xaml.cs">
+      <DependentUpon>AddMyCardio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddMyStrength.xaml.cs">
+      <DependentUpon>AddMyStrength.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Arc.cs" />
     <Compile Include="AuthentificationWindow.xaml.cs" />
+    <Compile Include="BirthDialog.xaml.cs">
+      <DependentUpon>BirthDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BreakfastGoal.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaloriesAdd.xaml.cs">
+      <DependentUpon>CaloriesAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cardio.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
@@ -140,6 +184,9 @@
     <Compile Include="DinnerGoal.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Email.xaml.cs">
+      <DependentUpon>Email.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FitnessAppModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,8 +211,17 @@
       <DependentUpon>FriendsList.xaml</DependentUpon>
     </Compile>
     <Compile Include="FriendsMenuWindow.xaml.cs" />
+    <Compile Include="GenderDialog.xaml.cs">
+      <DependentUpon>GenderDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Goal.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Goals.xaml.cs">
+      <DependentUpon>Goals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HeightScale.xaml.cs">
+      <DependentUpon>HeightScale.xaml</DependentUpon>
     </Compile>
     <Compile Include="HomePageWindow.xaml.cs" />
     <Compile Include="Ingredient.cs">
@@ -204,6 +260,10 @@
     <Compile Include="Progress.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProgressChart.xaml.cs">
+      <DependentUpon>ProgressChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressToAngleConverter.cs" />
     <Compile Include="Reminder.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
@@ -219,20 +279,49 @@
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserDialog.xaml.cs">
+      <DependentUpon>UserDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WeightGoal.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfileForm.xaml.cs">
+      <DependentUpon>MyProfileForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileEdit.xaml.cs">
+      <DependentUpon>ProfileEdit.xaml</DependentUpon>
     </Compile>
     <Page Include="AddFriends.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="AddMyCardio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddMyStrength.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AuthentificationWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="BirthDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaloriesAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChangePasswordWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ForgotPasswordWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -253,6 +342,18 @@
     <Page Include="FriendsMenuWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GenderDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Goals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HeightScale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HomePageWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -292,7 +393,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ProgressChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyProfileForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfileEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

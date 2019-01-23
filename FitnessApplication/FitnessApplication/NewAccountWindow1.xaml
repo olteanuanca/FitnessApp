@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="New Account: Step 1" Height="450" Width="800">
     <Grid>
-        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="300" Margin="348,92,0,0" VerticalAlignment="Top" Width="389"/>
+        <Image Source="C:\Users\Teodora\Documents\FitnessApp\FitnessApp2\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="300" Margin="348,92,0,0" VerticalAlignment="Top" Width="389"/>
 
-        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="273,10,0,0" VerticalAlignment="Top" Width="296"/>
+        <Image Source="C:\Users\Teodora\Documents\FitnessApp\FitnessApp2\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="273,10,0,0" VerticalAlignment="Top" Width="296"/>
         <Label Content="Create new account:" HorizontalAlignment="Left" Margin="27,55,0,0" VerticalAlignment="Top" Height="28" Width="162" FontFamily="Times New Roman" FontSize="18" FontWeight="Bold" Background="#00000000" Foreground="#FF3F0A59"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Height="34" Margin="27,76,0,0" VerticalAlignment="Top" Width="105" FontFamily="Times New Roman" RenderTransformOrigin="0.51,0.517"/>
         <TextBox Name="EmailAdress_textbox" HorizontalAlignment="Left" Height="19" Margin="27,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>

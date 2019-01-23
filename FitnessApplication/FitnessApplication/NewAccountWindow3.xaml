@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="New Account: Step 3" Height="459.6" Width="800">
     <Grid>
-        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="379,101,-100.4,0" VerticalAlignment="Top" Width="515"/>
+        <Image Source="C:\Users\Teodora\Documents\FitnessApp\FitnessApp2\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="379,101,-100.4,0" VerticalAlignment="Top" Width="515"/>
 
-        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="91" Margin="444,24,0,0" VerticalAlignment="Top" Width="234"/>
+        <Image Source="C:\Users\Teodora\Documents\FitnessApp\FitnessApp2\LogoApp.jpeg" HorizontalAlignment="Left" Height="91" Margin="444,24,0,0" VerticalAlignment="Top" Width="234"/>
         <TextBox Name="friend1_textbox" HorizontalAlignment="Left" Height="26" Margin="10,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontFamily="Times New Roman" FontSize="14"/>
         <Label  Content="Members Who Diet With Friends Lose 3X As Much Weight!" HorizontalAlignment="Left" Margin="22,24,0,0" VerticalAlignment="Top" Height="38" Width="536" FontFamily="Times New Roman" FontSize="18" Foreground="#FF500874" Background="#00000000" FontWeight="Bold"/>
         <Button Name="addfriend_button" Content="Add Friends" HorizontalAlignment="Left" Margin="22,328,0,0" VerticalAlignment="Top" Width="72" Height="22" Background="#FFC29BC7" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold" Click="addfriend_button_Click"/>

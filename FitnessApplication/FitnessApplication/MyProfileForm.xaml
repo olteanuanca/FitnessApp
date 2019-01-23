@@ -1,0 +1,49 @@
+﻿<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        xmlns:visualizationToolkit="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="FitnessApplication.Window1"
+        mc:Ignorable="d"
+        Title="MyProfileForm" FontFamily="Cambria" Height="620" Width="500">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Teodora\Desktop\690c6a892584b8b3e8705de472a23869.jpg"></ImageBrush>
+    </Window.Background>
+    <Grid>
+        <StackPanel Margin="10,0,0.333,9.667">
+           <WrapPanel  Margin="1,40,0,250"> 
+                <Image  x:Name="UserImage" 
+                        HorizontalAlignment="Left"
+                        Height="51" Margin="80,10,0,0" 
+                        VerticalAlignment="Top" Width="96"/>
+                <TextBox x:Name="User" HorizontalAlignment="Left" Height="39" Margin="125,10,20,20" TextWrapping="Wrap" Text=" " FontSize="30" FontStyle="Normal" FontFamily="Bookman" VerticalAlignment="Top" Width="150"/>
+           </WrapPanel>
+            <Button FontStyle="Normal" FontStretch="UltraCondensed" FontSize="20" Background="GhostWhite" Content="Edit Profile"  HorizontalAlignment="Left" Height="30" Margin="26,-110,0,80.667" Width="152" Click="Button_Click" />
+
+            <WrapPanel Margin="10,-460,10.333,0" Height="238">
+                <TextBox  x:Name="Friends" Height="50" TextWrapping="Wrap" Text=" 0 Friends" Margin="15,150,13,-15" Width="155" FontSize="30" FontStyle="Normal"/>
+               <TextBox x:Name="Weight" Height="50" TextWrapping="Wrap"  Width="155" Margin="95,150,13,-10" Text=" 0 kg lost" FontSize="30" FontStyle="Normal"/>
+            </WrapPanel>
+            <Label  FontSize="20" Content="Post something :"  Margin="27,-100,307.333,0" Height="40"/>
+            <TextBox x:Name="PostTxt"    HorizontalAlignment="Left" Height="42" Margin="6,-28,0,0" TextWrapping="Wrap" Text="Type ...." Width="263" TextChanged="TextBox_TextChanged"/>
+            <Button    FontStyle="Normal" FontStretch="UltraCondensed" FontSize="20" Background="GhostWhite"
+                       Content="Post" HorizontalAlignment="Left" Height="33" Margin="280,-42,0,0" Width="44" Click="Button_Click_P"/>
+            <Button  FontStyle="Normal" FontStretch="UltraCondensed" FontSize="20" Background="GhostWhite"  Content="Insert image" HorizontalAlignment="Left" Height="43" Margin="345,-44,0,0" Width="118" Click="Button_Click_InCardio"/>
+            <Button FontStyle="Normal" FontStretch="UltraCondensed" FontSize="15"
+                    Background="GhostWhite"  Content="Insert Cardio" HorizontalAlignment="Left"
+                    Height="50" Margin="25,60,0,0" Width="117" Click="Button_Click_InCardio"/>
+            <Button FontStyle="Normal" FontStretch="UltraCondensed" FontSize="15" Background="GhostWhite" Content="Insert Strength" HorizontalAlignment="Left" Height="50" Margin="25,10,0,0" Width="117" Click="Button_Click_InStrength"/>
+            <Button Content="Button" HorizontalAlignment="Left" Height="27" Margin="359,0,0,0" Width="79" Click="Button_Click_4"/>
+
+
+            <!--
+            <Button Content="Goals" Height="20" Width="77" Margin="115,-70,115.333,0" Click="Button_Click_1"/>
+            <Button Content="Meals" Height="20" Margin="208,-8,208.333,0" Click="Button_Click_2"/> 
+            -->
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>

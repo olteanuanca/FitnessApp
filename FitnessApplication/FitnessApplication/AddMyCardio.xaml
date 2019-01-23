@@ -1,0 +1,20 @@
+﻿<Window x:Class="FitnessApplication.AddMyCardio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="AddMyCardio" Height="304.804" Width="459.43"
+        FontSize="16">
+    <Grid>
+        <Label FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="Insert Cardio Description:" HorizontalAlignment="Left" Height="36" Margin="54,50,0,0" VerticalAlignment="Top" Width="189"/>
+        <Label FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="Duration:" HorizontalAlignment="Left" Height="38" Margin="54,106,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="Calories Burned" HorizontalAlignment="Left" Height="29" Margin="54,171,0,0" VerticalAlignment="Top" Width="126"/>
+        <Button FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="Insert" HorizontalAlignment="Left" Height="37" Margin="277,228,0,0" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Click="Button_Click"/>
+        <TextBox x:Name="Description" HorizontalAlignment="Left" Height="38" Margin="248,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181"/>
+        <TextBox x:Name="Duration" HorizontalAlignment="Left" Height="38" Margin="248,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147"/>
+        <TextBox x:Name="Burned" HorizontalAlignment="Left" Height="38" Margin="248,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147"/>
+
+    </Grid>
+</Window>

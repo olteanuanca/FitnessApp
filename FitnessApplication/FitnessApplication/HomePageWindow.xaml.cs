@@ -30,5 +30,11 @@ namespace FitnessApplication
             friends.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 profile = new Window1();
+            profile.Show();
+        }
     }
 }
