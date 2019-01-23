@@ -19,6 +19,7 @@ namespace FitnessApplication
   
     public partial class NewAccountWindow1 : Window
     {
+        public static BitmapImage bitmap;
 
         public static string  EmAdress ;
         public static string LName ;
@@ -61,7 +62,7 @@ namespace FitnessApplication
             {
                 if (check.AccUsername != null)
                 {
-                    System.Windows.MessageBox.Show("This Username is already taken!. Please try anotherone!");
+                    System.Windows.MessageBox.Show("This Username is already taken!. Please try another one!");
                     return;
                 }
                 else if (check.AccEmail != null)
@@ -106,18 +107,17 @@ namespace FitnessApplication
 
             
         }
-
+        public static OpenFileDialog browsePicture;
         private void Browse_button_Click(object sender, RoutedEventArgs e)
         {
             string imageLocation;
-            OpenFileDialog browsePicture = new OpenFileDialog();
+            browsePicture = new OpenFileDialog();
             browsePicture.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*jpg|All files(*.*)|*.*";
            
             if (browsePicture.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 imageLocation = browsePicture.FileName.ToString();
-
-                BitmapImage bitmap = new BitmapImage();
+                bitmap = new BitmapImage();
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(imageLocation);
                 bitmap.EndInit();

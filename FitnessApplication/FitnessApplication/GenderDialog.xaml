@@ -1,0 +1,19 @@
+﻿<Window x:Class="FitnessApplication.GenderDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+     Title="GenderDialog" Height="250" Width="300" FontFamily="Cambria" FontSize="14">
+
+    <Grid>
+        <Label FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="Select your gender: " HorizontalAlignment="Left" Height="26" Margin="32,28,0,0" VerticalAlignment="Top" Width="135"/>
+        <RadioButton x:Name="Male" Content="Male" HorizontalAlignment="Left" Height="16" Margin="32,96,0,0" VerticalAlignment="Top" Width="78"/>
+        <RadioButton x:Name="Female" Content="Female" HorizontalAlignment="Left" Height="16" Margin="163,96,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="OK" HorizontalAlignment="Left" Margin="98,183,0,0" VerticalAlignment="Top" Width="90" Height="19" Click="Button_Click"/>
+        <Button FontStyle="Normal" FontStretch="UltraCondensed"  Background="GhostWhite" Content="Cancel" HorizontalAlignment="Left" Height="19" Margin="190,183,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+
+        </Button>
+    </Grid>
+</Window>

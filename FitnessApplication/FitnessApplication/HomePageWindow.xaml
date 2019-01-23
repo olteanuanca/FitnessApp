@@ -48,5 +48,8 @@
 
 
       
+            </Button>
+        </Border>
+        <Button Background="#FF893AA9" BorderBrush="#FF2C0D38" Content="Profile" HorizontalAlignment="Left" Height="60" Margin="75,235,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click"/>
     </Grid>
 </Window>

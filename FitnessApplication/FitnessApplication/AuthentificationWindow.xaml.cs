@@ -17,7 +17,7 @@ namespace FitnessApplication
   
     public partial class AuthentificationWindow : Window
     {
-        public static string currentUsername;
+        public static string currentUsername { get; set; }
         public AuthentificationWindow()
         {
             InitializeComponent();
@@ -40,6 +40,9 @@ namespace FitnessApplication
 
         private void LogIn_button_Click(object sender, RoutedEventArgs e)
         {
+
+            
+
             currentUsername = Username_textbox.Text;
             
 
@@ -62,6 +65,7 @@ namespace FitnessApplication
                 currentUsername = Username_textbox.Text;
                 HomePageWindow home = new HomePageWindow();
                 home.Show();
+
                 this.Close();
             }
             else if(check.AccPassword!=hashPassword)
@@ -70,6 +74,7 @@ namespace FitnessApplication
               
             }
 
+           
 
 
         }
