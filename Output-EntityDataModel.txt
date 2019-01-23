@@ -1,0 +1,3 @@
+﻿Generated model file: FitnessAppModel.edmx.
+Loading metadata from the database took 00:00:02.4546747.
+Generating the model took 00:00:03.1589277.
