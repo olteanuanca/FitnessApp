@@ -128,6 +128,12 @@ namespace FitnessApplication
         {
 
         }
+        private void Food_Click(object sender, RoutedEventArgs e)
+        {
+            Recipes window = new Recipes();
+            window.Show();
+
+        }
 
 
         private void AddWaterButton_Click(object sender, RoutedEventArgs e)

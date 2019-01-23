@@ -9,49 +9,44 @@
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="74" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF741574">
         </Border>
+   
         <Button x:Name="DiaryExercise" Content="Diary Exercise" Margin="255,-1,447.6,337" Click="DiaryExercise_Click" Background="#FF893AA9" BorderBrush="#FF3E1568"/>
-                       
-                    
-                        
-                   
-                
-            </>
+   
         <Button Name="DiaryFood" Content="Diary Food" HorizontalAlignment="Left" Margin="148,0,0,0" VerticalAlignment="Top" Width="87" Height="74" Click="DiaryFood_Click" Background="#FF893AA9" BorderBrush="#FF3E1568"/>
         <Button Name="NutritionButton" Content="Nutrition" Click="NutritionButton_Click" HorizontalAlignment="Left" Margin="370,0,0,0" VerticalAlignment="Top" Width="86" Background="#FF893AA9" BorderBrush="#FF3E1568" Height="74"/>
-
-
-
-
-            <Button Name="Friends" Content="" Margin="310.2,-0.8,416.8,8.8" Click="Friends_Click">
-                <Button.Background>
-                    <ImageBrush>
-                        <ImageBrush.ImageSource>
-                            <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/FriendsLogo.jpeg"/>
-                        </ImageBrush.ImageSource>
-                    </ImageBrush>
-                </Button.Background>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Fill="{TemplateBinding Background}"/>
-                            <ContentPresenter Content="{TemplateBinding Content}"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
-        </Border>
-        <Button Name="Food" Content="" HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Top" Width="72" Click="Food_Click" Height="63">
+        <Button Name="Friends" Content="" Margin="479,0,247.6,345" Click="Friends_Click">
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="D:\Repo\FoodLogo.png"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FriendsLogo.jpeg"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
+        <Button Name="Food" Content="" HorizontalAlignment="Left" Margin="39,0,0,0" VerticalAlignment="Top" Width="72" Click="Food_Click" Height="63">
+                <Button.Background>
+                    <ImageBrush>
+                        <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FoodLogo.png"/>
+                        </ImageBrush.ImageSource>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>  
+                
+           
+         
+
+
+      
     </Grid>
 </Window>

@@ -32,7 +32,7 @@
                 <DataGridTextColumn x:Name="sodiumColumn" Binding="{Binding Sodium}" Header="Sodium" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="sugarsColumn" Binding="{Binding Sugars}" Header="Sugars" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="vitAColumn" Binding="{Binding VitA}" Header="Vit A" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="vitCColumn" Binding="{Binding VitC}" Header="Vit C" Width="SizeToHeader"/>
+                <DataGridTextColumn   x:Name="vitCColumn" Binding="{Binding VitC}" Header="Vit C" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
 

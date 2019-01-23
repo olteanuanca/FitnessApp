@@ -117,7 +117,7 @@
     </Key>
     <Property Name="id_Diary" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_Diary_Entry" Type="int" Nullable="false" />
-    <Property Name="id_Account" Type="int" Nullable="false" />
+    <Property Name="id_Account" Type="int" />
   </EntityType>
   <EntityType Name="DiaryBreakfast">
     <Key>
@@ -554,16 +554,6 @@
     <Property Name="WeightPerRep" Type="int" />
     <Property Name="Calories_burned" Type="int" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="WeightGoals">
     <Key>
       <PropertyRef Name="id_WeightGoals" />
@@ -779,8 +769,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Diary__id_Accoun__5F492382">
-    <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
+  <Association Name="FK__Diary__id_Accoun__65F62111">
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
     <End Role="Diary" Type="Self.Diary" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Accounts">
@@ -1063,7 +1053,6 @@
     <EntitySet Name="Snack1Goals" EntityType="Self.Snack1Goals" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Snack2Goals" EntityType="Self.Snack2Goals" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Strength" EntityType="Self.Strength" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WeightGoals" EntityType="Self.WeightGoals" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Accounts___id_Ac__3BFFE745" Association="Self.FK__Accounts___id_Ac__3BFFE745">
       <End Role="Accounts" EntitySet="Accounts" />
@@ -1133,7 +1122,7 @@
       <End Role="Progress" EntitySet="Progress" />
       <End Role="Accounts" EntitySet="Accounts" />
     </AssociationSet>
-    <AssociationSet Name="FK__Diary__id_Accoun__5F492382" Association="Self.FK__Diary__id_Accoun__5F492382">
+    <AssociationSet Name="FK__Diary__id_Accoun__65F62111" Association="Self.FK__Diary__id_Accoun__65F62111">
       <End Role="Accounts" EntitySet="Accounts" />
       <End Role="Diary" EntitySet="Diary" />
     </AssociationSet>

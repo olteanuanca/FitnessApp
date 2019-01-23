@@ -13,7 +13,7 @@
                 <Button.Background>
                     <ImageBrush>
                         <ImageBrush.ImageSource>
-                            <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/FriendsLogo.jpeg"/>
+                            <BitmapImage UriSource="D:\Scoala\Repo\FriendsLogo.jpeg"/>
                         </ImageBrush.ImageSource>
                     </ImageBrush>
                 </Button.Background>
@@ -34,7 +34,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/FriendsLogo.jpeg"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FriendsLogo.jpeg"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -54,7 +54,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/PlusLogo.png"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\PlusLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -74,7 +74,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/MessageLogo.png"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\MessageLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -94,7 +94,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/RequestLogo.png"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\RequestLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -121,7 +121,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="D:\Repo\FoodLogo.png"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FoodLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>

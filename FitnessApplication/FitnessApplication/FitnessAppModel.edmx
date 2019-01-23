@@ -122,7 +122,7 @@
           </Key>
           <Property Name="id_Diary" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_Diary_Entry" Type="int" Nullable="false" />
-          <Property Name="id_Account" Type="int" Nullable="false" />
+          <Property Name="id_Account" Type="int" />
         </EntityType>
         <EntityType Name="DiaryBreakfast">
           <Key>
@@ -559,16 +559,6 @@
           <Property Name="WeightPerRep" Type="int" />
           <Property Name="Calories_burned" Type="int" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="WeightGoals">
           <Key>
             <PropertyRef Name="id_WeightGoals" />
@@ -784,8 +774,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Diary__id_Accoun__5F492382">
-          <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
+        <Association Name="FK__Diary__id_Accoun__65F62111">
+          <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
           <End Role="Diary" Type="Self.Diary" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Accounts">
@@ -1068,7 +1058,6 @@
           <EntitySet Name="Snack1Goals" EntityType="Self.Snack1Goals" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Snack2Goals" EntityType="Self.Snack2Goals" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Strength" EntityType="Self.Strength" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WeightGoals" EntityType="Self.WeightGoals" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Accounts___id_Ac__3BFFE745" Association="Self.FK__Accounts___id_Ac__3BFFE745">
             <End Role="Accounts" EntitySet="Accounts" />
@@ -1138,7 +1127,7 @@
             <End Role="Progress" EntitySet="Progress" />
             <End Role="Accounts" EntitySet="Accounts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Diary__id_Accoun__5F492382" Association="Self.FK__Diary__id_Accoun__5F492382">
+          <AssociationSet Name="FK__Diary__id_Accoun__65F62111" Association="Self.FK__Diary__id_Accoun__65F62111">
             <End Role="Accounts" EntitySet="Accounts" />
             <End Role="Diary" EntitySet="Diary" />
           </AssociationSet>
@@ -1267,7 +1256,6 @@
           <EntitySet Name="Snack1Goals" EntityType="MyFitModel.Snack1Goals" />
           <EntitySet Name="Snack2Goals" EntityType="MyFitModel.Snack2Goals" />
           <EntitySet Name="Strengths" EntityType="MyFitModel.Strength" />
-          <EntitySet Name="sysdiagrams" EntityType="MyFitModel.sysdiagram" />
           <EntitySet Name="WeightGoals" EntityType="MyFitModel.WeightGoal" />
           <AssociationSet Name="FK__Accounts__id_Acc__382F5661" Association="MyFitModel.FK__Accounts__id_Acc__382F5661">
             <End Role="AccountCredential" EntitySet="AccountCredentials" />
@@ -1309,7 +1297,7 @@
             <End Role="Progress" EntitySet="Progresses" />
             <End Role="Account" EntitySet="Accounts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Diary__id_Accoun__5F492382" Association="MyFitModel.FK__Diary__id_Accoun__5F492382">
+          <AssociationSet Name="FK__Diary__id_Accoun__65F62111" Association="MyFitModel.FK__Diary__id_Accoun__65F62111">
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Diary" EntitySet="Diaries" />
           </AssociationSet>
@@ -1455,7 +1443,7 @@
           <NavigationProperty Name="Accounts_Strength" Relationship="MyFitModel.FK__Accounts___id_Ac__52E34C9D" FromRole="Account" ToRole="Accounts_Strength" />
           <NavigationProperty Name="Goal" Relationship="MyFitModel.FK__Accounts__id_Acc__373B3228" FromRole="Account" ToRole="Goal" />
           <NavigationProperty Name="Progress" Relationship="MyFitModel.FK__Accounts__id_Acc__39237A9A" FromRole="Account" ToRole="Progress" />
-          <NavigationProperty Name="Diaries" Relationship="MyFitModel.FK__Diary__id_Accoun__5F492382" FromRole="Account" ToRole="Diary" />
+          <NavigationProperty Name="Diaries" Relationship="MyFitModel.FK__Diary__id_Accoun__65F62111" FromRole="Account" ToRole="Diary" />
         </EntityType>
         <EntityType Name="Accounts_Cardio">
           <Key>
@@ -1562,8 +1550,8 @@
           </Key>
           <Property Name="id_Diary" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_Diary_Entry" Type="Int32" Nullable="false" />
-          <Property Name="id_Account" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="MyFitModel.FK__Diary__id_Accoun__5F492382" FromRole="Diary" ToRole="Account" />
+          <Property Name="id_Account" Type="Int32" />
+          <NavigationProperty Name="Account" Relationship="MyFitModel.FK__Diary__id_Accoun__65F62111" FromRole="Diary" ToRole="Account" />
           <NavigationProperty Name="DiaryEntry" Relationship="MyFitModel.FK__Diary__id_Diary___24285DB4" FromRole="Diary" ToRole="DiaryEntry" />
         </EntityType>
         <EntityType Name="DiaryBreakfast">
@@ -2045,16 +2033,6 @@
           <Property Name="WeightPerRep" Type="Int32" />
           <Property Name="Calories_burned" Type="Int32" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="WeightGoal">
           <Key>
             <PropertyRef Name="id_WeightGoals" />
@@ -2187,8 +2165,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Diary__id_Accoun__5F492382">
-          <End Type="MyFitModel.Account" Role="Account" Multiplicity="1" />
+        <Association Name="FK__Diary__id_Accoun__65F62111">
+          <End Type="MyFitModel.Account" Role="Account" Multiplicity="0..1" />
           <End Type="MyFitModel.Diary" Role="Diary" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
@@ -3111,17 +3089,6 @@
                 <ScalarProperty Name="NbOfSets" ColumnName="NbOfSets" />
                 <ScalarProperty Name="Strength_Description" ColumnName="Strength_Description" />
                 <ScalarProperty Name="id_Strength" ColumnName="id_Strength" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="MyFitModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

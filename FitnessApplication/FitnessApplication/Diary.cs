@@ -16,7 +16,7 @@ namespace FitnessApplication
     {
         public int id_Diary { get; set; }
         public int id_Diary_Entry { get; set; }
-        public int id_Account { get; set; }
+        public Nullable<int> id_Account { get; set; }
     
         public virtual Account Account { get; set; }
         public virtual DiaryEntry DiaryEntry { get; set; }

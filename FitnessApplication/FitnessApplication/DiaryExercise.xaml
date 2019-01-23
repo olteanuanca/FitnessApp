@@ -19,10 +19,20 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///C:/Users/Diana/source/repos/FitnessApp/FriendsLogo.jpeg"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FriendsLogo.jpeg"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Button Name="DiaryFood" Content="Diary Food" HorizontalAlignment="Left" Margin="159,0,0,0" VerticalAlignment="Top" Width="86" Height="67" Background="#FF893AA9" BorderBrush="#FF2C0D38" Click="DiaryFood_Click"/>
         <Button Name="NutritionButton" Content="Nutrition" Click="NutritionButton_Click" HorizontalAlignment="Left" Margin="416,0,0,0" VerticalAlignment="Top" Width="97" Height="67" Background="#FF893AA9" BorderBrush="#FF2C0D38" />

@@ -10,11 +10,11 @@ none
 false
 TRACE
 D:\Scoala\Repo\FitnessApplication\FitnessApplication\App.xaml
-14-1781878179
+30-1423400296
 2388864501
-65-1705595275
+811391859177
 23-204955795
-AddFriends.xaml;AuthentificationWindow.xaml;ChangePasswordWindow.xaml;ForgotPasswordWindow.xaml;FriendMessages.xaml;FriendRequests.xaml;FriendsList.xaml;FriendsMenuWindow.xaml;HomePageWindow.xaml;MainWindow.xaml;NewAccountWindow1.xaml;NewAccountWindow2.xaml;NewAccountWindow3.xaml;UserControls\Menu.xaml;
+AddCardioExercise.xaml;AddFoodDialog.xaml;AddFoodFromMealsDialog.xaml;AddFoodFromRecipes.xaml;AddFriends.xaml;AddFromMyCardio.xaml;AddFromMyStrength.xaml;AddStrengthExercise.xaml;AddWater.xaml;AuthentificationWindow.xaml;ChangePasswordWindow.xaml;DiaryExercise.xaml;DiaryFood.xaml;CreateMeal.xaml;CreateRecipe.xaml;ForgotPasswordWindow.xaml;FriendMessages.xaml;FriendRequests.xaml;FriendsList.xaml;FriendsMenuWindow.xaml;HomePageWindow.xaml;MainWindow.xaml;Meals.xaml;NewAccountWindow1.xaml;NewAccountWindow2.xaml;NewAccountWindow3.xaml;Nutrients.xaml;Nutrition.xaml;Recipes.xaml;UserControls\Menu.xaml;
 
 True
 

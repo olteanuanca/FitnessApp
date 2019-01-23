@@ -11,7 +11,7 @@
             <ColumnDefinition Width="460*"/>
             <ColumnDefinition Width="331*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="349,88,-73.4,0" VerticalAlignment="Top" Width="515" Grid.ColumnSpan="2"/>
+        <Image Source="D:\Scoala\Repo\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="297" Margin="349,88,-73.4,0" VerticalAlignment="Top" Width="515" Grid.ColumnSpan="2"/>
         <TextBox Name="Username_textbox" HorizontalAlignment="Left" Height="35" Margin="234,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" FontFamily="Times New Roman" FontSize="14" Grid.ColumnSpan="2"/>
         <Label Name="login_label" Content="Member Login" HorizontalAlignment="Left" Margin="226,167,0,0" VerticalAlignment="Top" Height="32" Width="168" FontFamily="Times New Roman" FontSize="18" Foreground="#FF500874" Background="#00000000" FontWeight="Bold"/>
         <Button Name="LogIn_button" Content="Log In" HorizontalAlignment="Left" Margin="234,306,0,0" VerticalAlignment="Top" Width="72" Height="22" Background="#FFC29BC7" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold" Click="LogIn_button_Click"/>
@@ -20,7 +20,7 @@
         <Label Name="ForgotPassword_label" Content="Forgot password?" HorizontalAlignment="Left" Margin="234,333,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Times New Roman" FontSize="10" Background="#00000000" Foreground="#FF080AD6" MouseDoubleClick="ForgotPassword_label_MouseDoubleClick"/>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="234,199,0,0" VerticalAlignment="Top" Height="34" Width="86" FontFamily="Times New Roman" FontSize="12"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="234,250,0,0" VerticalAlignment="Top" Width="86" FontFamily="Times New Roman" FontSize="12"/>
-        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="91" Margin="283,10,0,0" VerticalAlignment="Top" Width="197" Grid.ColumnSpan="2"/>
+        <Image Source="D:\Scoala\Repo\LogoApp.jpeg" HorizontalAlignment="Left" Height="91" Margin="283,10,0,0" VerticalAlignment="Top" Width="197" Grid.ColumnSpan="2"/>
         <PasswordBox Name="Password_textbox"  HorizontalAlignment="Left" Margin="234,271,0,0" VerticalAlignment="Top" Height="35" Width="246" FontFamily="Times New Roman" FontSize="14" Grid.ColumnSpan="2"/>
 
     </Grid>

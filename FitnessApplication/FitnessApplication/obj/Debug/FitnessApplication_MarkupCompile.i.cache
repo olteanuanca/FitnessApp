@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Repo\FitnessApplication\FitnessApplication\obj\Debug\
+D:\Scoala\Repo\FitnessApplication\FitnessApplication\obj\Debug\
 FitnessApplication
 none
 false
 DEBUG;TRACE
-D:\Repo\FitnessApplication\FitnessApplication\App.xaml
-18-1544159589
+D:\Scoala\Repo\FitnessApplication\FitnessApplication\App.xaml
+30-1423400296
 2388864501
-73138322628
-231594130987
-AddFriends.xaml;AuthentificationWindow.xaml;ChangePasswordWindow.xaml;CreateMeal.xaml;CreateRecipe.xaml;ForgotPasswordWindow.xaml;FriendMessages.xaml;FriendRequests.xaml;FriendsList.xaml;FriendsMenuWindow.xaml;HomePageWindow.xaml;MainWindow.xaml;Meals.xaml;NewAccountWindow1.xaml;NewAccountWindow2.xaml;NewAccountWindow3.xaml;Recipes.xaml;UserControls\Menu.xaml;
+85-1118762414
+23-204955795
+AddCardioExercise.xaml;AddFoodDialog.xaml;AddFoodFromMealsDialog.xaml;AddFoodFromRecipes.xaml;AddFriends.xaml;AddFromMyCardio.xaml;AddFromMyStrength.xaml;AddStrengthExercise.xaml;AddWater.xaml;AuthentificationWindow.xaml;ChangePasswordWindow.xaml;DiaryExercise.xaml;DiaryFood.xaml;CreateMeal.xaml;CreateRecipe.xaml;ForgotPasswordWindow.xaml;FriendMessages.xaml;FriendRequests.xaml;FriendsList.xaml;FriendsMenuWindow.xaml;HomePageWindow.xaml;MainWindow.xaml;Meals.xaml;NewAccountWindow1.xaml;NewAccountWindow2.xaml;NewAccountWindow3.xaml;Nutrients.xaml;Nutrition.xaml;Recipes.xaml;UserControls\Menu.xaml;
 
-True
+False
 

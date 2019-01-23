@@ -24,16 +24,33 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///C:/Users/Diana/source/repos/FitnessApp/FriendsLogo.jpeg"/>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FriendsLogo.jpeg"/>
+                    </ImageBrush.ImageSource>
+                </ImageBrush>
+            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="DiaryFoodButton" Content="Diary Food" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Top" Width="84" Height="62" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
+        <Button Name="NutritionButton" Content="Nutrition" Click="NutritionButton_Click" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" Width="90" Height="62" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
+        <Button Name="Food" Content="" HorizontalAlignment="Left" Margin="471,-1,0,0" VerticalAlignment="Top" Width="72" Click="Food_Click" Height="63">
+            <Button.Background>
+                <ImageBrush>
+                    <ImageBrush.ImageSource>
+                        <BitmapImage UriSource="D:\Scoala\Repo\FoodLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
         </Button>
-        <Button Name="DiaryFoodButton" Content="Diary Food" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Top" Width="84" Height="62" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
-        <Button Name="NutritionButton" Content="Nutrition" Click="NutritionButton_Click" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" Width="90" Height="62" Background="#FF893AA9" BorderBrush="#FF2C0D38"/>
-
-
-        <DataGrid x:Name="diaryBreakfastDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="135,122,11,594" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="diaryBreakfastDataGrid_SelectionChanged" RenderTransformOrigin="0.503,0.535" ColumnWidth="SizeToHeader" VerticalGridLinesBrush="#FF733571" HorizontalGridLinesBrush="#FF733571">
+        <DataGrid    x:Name="diaryBreakfastDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="135,122,11,594" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="diaryBreakfastDataGrid_SelectionChanged" RenderTransformOrigin="0.503,0.535" ColumnWidth="SizeToHeader" VerticalGridLinesBrush="#FF733571" HorizontalGridLinesBrush="#FF733571">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Name" Width="80"/>
                 <DataGridTextColumn x:Name="calciumColumn" Binding="{Binding Calcium}" Header="Calcium" Width="SizeToHeader"/>

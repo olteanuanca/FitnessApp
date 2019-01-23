@@ -68,7 +68,6 @@ namespace FitnessApplication
         public virtual DbSet<Snack1Goals> Snack1Goals { get; set; }
         public virtual DbSet<Snack2Goals> Snack2Goals { get; set; }
         public virtual DbSet<Strength> Strengths { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<WeightGoal> WeightGoals { get; set; }
     }
 }

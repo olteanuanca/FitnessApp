@@ -1,8 +1,20 @@
 ﻿
 
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddCardioExercise.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddFoodDialog.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddFoodFromMealsDialog.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddFoodFromRecipes.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddFriends.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddFromMyCardio.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddFromMyStrength.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddStrengthExercise.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AddWater.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\AuthentificationWindow.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\ChangePasswordWindow.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\DiaryExercise.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\DiaryFood.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\CreateMeal.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\CreateRecipe.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\ForgotPasswordWindow.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\FriendMessages.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\FriendRequests.xaml;;
@@ -10,8 +22,12 @@ FD:\Scoala\Repo\FitnessApplication\FitnessApplication\FriendsList.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\FriendsMenuWindow.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\HomePageWindow.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\MainWindow.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\Meals.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\NewAccountWindow1.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\NewAccountWindow2.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\NewAccountWindow3.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\Nutrients.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\Nutrition.xaml;;
+FD:\Scoala\Repo\FitnessApplication\FitnessApplication\Recipes.xaml;;
 FD:\Scoala\Repo\FitnessApplication\FitnessApplication\UserControls\Menu.xaml;;
 

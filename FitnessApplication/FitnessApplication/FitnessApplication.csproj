@@ -264,9 +264,6 @@
     <Compile Include="Strength.cs">
       <DependentUpon>FitnessAppModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>FitnessAppModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -400,6 +397,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Nutrition.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Recipes.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Menu.xaml">

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="New Account: Step 2" Height="588.903" Width="804.592">
     <Grid Margin="0,0,9.4,10.2">
-        <Image Source="D:\Work 3\RepoFitnessApp\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="300" Margin="395,100,0,0" VerticalAlignment="Top" Width="389"/>
+        <Image Source="D:\Scoala\Repo\BackgroundApp.jpeg" HorizontalAlignment="Left" Height="300" Margin="395,100,0,0" VerticalAlignment="Top" Width="389"/>
 
-        <Image Source="D:\Work 3\RepoFitnessApp\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="467,10,0,0" VerticalAlignment="Top" Width="296"/>
+        <Image Source="D:\Scoala\Repo\LogoApp.jpeg" HorizontalAlignment="Left" Height="100" Margin="467,10,0,0" VerticalAlignment="Top" Width="296"/>
         <Label Content="Tell us about yourself:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="193" FontFamily="Times New Roman" FontSize="18" FontWeight="Bold" Background="#00000000" Foreground="#FF3F0A59"/>
         <Label Content="Current Weight:" HorizontalAlignment="Left" Height="27" Margin="7,58,0,0" VerticalAlignment="Top" Width="87" FontFamily="Times New Roman" FontSize="10" FontWeight="Bold"/>
         <Button Name="Countinue_button" Content="Continue" HorizontalAlignment="Left" Margin="17,445,0,0" VerticalAlignment="Top" Width="115" FontFamily="Times New Roman" FontSize="10" BorderBrush="#FF707070" Background="#FFD4A7EE" Height="21" FontWeight="Bold" Click="Countinue_button_Click"/>
