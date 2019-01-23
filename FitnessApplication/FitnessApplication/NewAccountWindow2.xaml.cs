@@ -414,13 +414,7 @@ namespace FitnessApplication
 
             var id13 = context.DiaryEntries.Max(i => i.id_DiaryEntry);
 
-            var Diary = new Diary
-            {
-               id_Diary_Entry=id13,
-            };
-
-            context.Diaries.Add(Diary);
-            context.SaveChanges();
+        
 
             NewAccountWindow1 w1 = new NewAccountWindow1();
             var temp1 = Convert.ToDateTime(BirthDate_textbox.Text).ToString("yyyy-MM-dd");
@@ -434,7 +428,7 @@ namespace FitnessApplication
                 temp3 = "Female";
 
 
-            var id14 = context.Diaries.Max(i => i.id_Diary);
+            //var id14 = context.Diaries.Max(i => i.id_Diary);
             var id15 = context.Goals.Max(i => i.id_Goals);
             var id16 = context.AccountCredentials.Max(i => i.id_AccCredentials);
             var id17 = context.Progresses.Max(i => i.id_Progress);
@@ -450,7 +444,7 @@ namespace FitnessApplication
                 Email = NewAccountWindow1.EmAdress,
                 Gender=temp3,
                 Photo=NewAccountWindow1.binImage,
-                id_Account_Diary=id14,
+              //  id_Account_Diary=id14,
                 id_Account_Goals=id15,
                 id_Account_AccountCredentials=id16,
                 id_Account_Progress=id17,
@@ -461,6 +455,16 @@ namespace FitnessApplication
             context.SaveChanges();
 
 
+            var id14 = context.Accounts.Max(i => i.id_Account);
+
+            var Diary = new Diary
+            {
+                id_Diary_Entry = id13,
+                id_Account=id14,
+            };
+
+            context.Diaries.Add(Diary);
+            context.SaveChanges();
 
             this.Close();
             NewAccountWindow3 window = new NewAccountWindow3();

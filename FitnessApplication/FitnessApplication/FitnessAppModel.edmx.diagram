@@ -4,88 +4,89 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="35e4e9faf6804b3f952f2cc8c402da23" Name="Diagram1" ZoomLevel="88">
-        <EntityTypeShape EntityType="MyFitModel.AccountCredential" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Account" Width="1.5" PointX="9.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Cardio" Width="1.5" PointX="12" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Friends" Width="1.5" PointX="12" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Meals" Width="1.5" PointX="12" PointY="12.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Notification" Width="1.5" PointX="15" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Recipes" Width="1.5" PointX="15" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Reminder" Width="1.5" PointX="15" PointY="12.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Accounts_Strength" Width="1.5" PointX="12" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.BreakfastGoal" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Cardio" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Diary" Width="1.5" PointX="7.5" PointY="33.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryBreakfast" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryCardio" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryDinner" Width="1.5" PointX="3" PointY="25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryEntry" Width="2.25" PointX="5.25" PointY="32" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryLunch" Width="1.5" PointX="3" PointY="29.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryNote" Width="1.5" PointX="3" PointY="34.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiarySnack1" Width="1.5" PointX="3" PointY="37.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiarySnack2" Width="1.5" PointX="3" PointY="42" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryStrength" Width="1.5" PointX="3" PointY="46.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DiaryWater" Width="1.5" PointX="3" PointY="50" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.DinnerGoal" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.FitnessGoal" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.FriendMessage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.FriendRequest" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Friend" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Goal" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Ingredient" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.LunchGoal" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.MealGoal" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.MyCardio" Width="1.5" PointX="9.75" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.MyMeal" Width="1.5" PointX="9.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.MyRecipe" Width="1.5" PointX="12.75" PointY="16.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.MyStrength" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Notification" Width="1.5" PointX="12.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.NutritionGoal" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Post" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Progress" Width="1.5" PointX="7.5" PointY="51.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Reminder" Width="1.5" PointX="12.75" PointY="22" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Snack1Goals" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Snack2Goals" Width="1.5" PointX="0.75" PointY="23" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.Strength" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyFitModel.WeightGoal" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__382F5661" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__3BFFE745" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__3FD07829" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__43A1090D" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__477199F1" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__4B422AD5" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__4F12BBB9" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__52E34C9D" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__36470DEF" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__373B3228" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__39237A9A" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ca__5006DFF2" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Fr__44952D46" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Me__4865BE2A" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_No__3CF40B7E" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_My__4C364F0E" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Re__40C49C62" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Accounts___id_St__53D770D6" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Br__5812160E" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Diary__id_Diary___24285DB4" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__19AACF41" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1E6F845E" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1D7B6025" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1A9EF37A" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1B9317B3" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1C873BEC" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1F63A897" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__2057CCD0" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__214BF109" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Di__5BE2A6F2" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Goals__id_Goals___797309D9" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Goals__id_Goals___7A672E12" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Goals__id_Goals___7B5B524B" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Lu__59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Sn__59063A47" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Sn__5AEE82B9" ManuallyRouted="false" />
-        <AssociationConnector Association="MyFitModel.FK__Nutrition__id_Nu__5EBF139D" ManuallyRouted="false" />
+      <Diagram DiagramId="35e4e9faf6804b3f952f2cc8c402da23" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="MyFitModel.AccountCredential" Width="1.5" PointX="7.5" PointY="15.125" />
+        <EntityTypeShape EntityType="MyFitModel.Account" Width="1.5" PointX="9.75" PointY="9.625" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Cardio" Width="1.5" PointX="15" PointY="8.375" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Friends" Width="1.5" PointX="12" PointY="8.375" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Meals" Width="1.5" PointX="12" PointY="11.375" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Notification" Width="1.5" PointX="15" PointY="14.375" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Recipes" Width="1.5" PointX="12" PointY="5.375" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Reminder" Width="1.5" PointX="15" PointY="11.375" />
+        <EntityTypeShape EntityType="MyFitModel.Accounts_Strength" Width="1.5" PointX="12" PointY="17.375" />
+        <EntityTypeShape EntityType="MyFitModel.BreakfastGoal" Width="1.5" PointX="0.75" PointY="15.125" />
+        <EntityTypeShape EntityType="MyFitModel.Cardio" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MyFitModel.Diary" Width="1.5" PointX="12" PointY="14.375" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryBreakfast" Width="1.5" PointX="7.5" PointY="27.25" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryCardio" Width="1.5" PointX="7.5" PointY="24.625" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryDinner" Width="1.5" PointX="7.5" PointY="47.5" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryEntry" Width="1.5" PointX="9.75" PointY="36.75" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryLunch" Width="1.5" PointX="7.5" PointY="42.625" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryNote" Width="1.5" PointX="7.5" PointY="37" />
+        <EntityTypeShape EntityType="MyFitModel.DiarySnack1" Width="1.5" PointX="7.5" PointY="52.375" />
+        <EntityTypeShape EntityType="MyFitModel.DiarySnack2" Width="1.5" PointX="7.5" PointY="32.125" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryStrength" Width="1.5" PointX="7.5" PointY="39.5" />
+        <EntityTypeShape EntityType="MyFitModel.DiaryWater" Width="1.5" PointX="7.5" PointY="22.25" />
+        <EntityTypeShape EntityType="MyFitModel.DinnerGoal" Width="1.5" PointX="0.75" PointY="24.5" />
+        <EntityTypeShape EntityType="MyFitModel.FitnessGoal" Width="1.5" PointX="5.25" PointY="6.875" />
+        <EntityTypeShape EntityType="MyFitModel.FriendMessage" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MyFitModel.FriendRequest" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MyFitModel.Friend" Width="1.5" PointX="9.75" PointY="1.5" />
+        <EntityTypeShape EntityType="MyFitModel.Goal" Width="1.5" PointX="7.5" PointY="11.125" />
+        <EntityTypeShape EntityType="MyFitModel.Ingredient" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MyFitModel.LunchGoal" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="MyFitModel.MealGoal" Width="1.5" PointX="3" PointY="10.75" />
+        <EntityTypeShape EntityType="MyFitModel.MyCardio" Width="1.5" PointX="12.75" PointY="2.375" />
+        <EntityTypeShape EntityType="MyFitModel.MyMeal" Width="1.5" PointX="9.75" PointY="16.25" />
+        <EntityTypeShape EntityType="MyFitModel.MyRecipe" Width="1.5" PointX="9.75" PointY="4.125" />
+        <EntityTypeShape EntityType="MyFitModel.MyStrength" Width="1.5" PointX="9.75" PointY="22.25" />
+        <EntityTypeShape EntityType="MyFitModel.Notification" Width="1.5" PointX="12.75" PointY="23.5" />
+        <EntityTypeShape EntityType="MyFitModel.NutritionGoal" Width="1.5" PointX="5.25" PointY="10.25" />
+        <EntityTypeShape EntityType="MyFitModel.Post" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MyFitModel.Progress" Width="1.5" PointX="7.5" PointY="6.625" />
+        <EntityTypeShape EntityType="MyFitModel.Reminder" Width="1.5" PointX="12.75" PointY="20.5" />
+        <EntityTypeShape EntityType="MyFitModel.Snack1Goals" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="MyFitModel.Snack2Goals" Width="1.5" PointX="0.75" PointY="10.5" />
+        <EntityTypeShape EntityType="MyFitModel.Strength" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MyFitModel.sysdiagram" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MyFitModel.WeightGoal" Width="1.5" PointX="5.25" PointY="15.625" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__382F5661" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__3BFFE745" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__3FD07829" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__43A1090D" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__477199F1" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__4B422AD5" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__4F12BBB9" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ac__52E34C9D" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__373B3228" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts__id_Acc__39237A9A" />
+        <AssociationConnector Association="MyFitModel.FK__Diary__id_Accoun__5F492382" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Ca__5006DFF2" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Fr__44952D46" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Me__4865BE2A" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_No__3CF40B7E" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_My__4C364F0E" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_Re__40C49C62" />
+        <AssociationConnector Association="MyFitModel.FK__Accounts___id_St__53D770D6" />
+        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Br__5812160E" />
+        <AssociationConnector Association="MyFitModel.FK__Diary__id_Diary___24285DB4" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__19AACF41" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1E6F845E" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1D7B6025" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1A9EF37A" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1B9317B3" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1C873BEC" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__1F63A897" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__2057CCD0" />
+        <AssociationConnector Association="MyFitModel.FK__DiaryEntr__id_DE__214BF109" />
+        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Di__5BE2A6F2" />
+        <AssociationConnector Association="MyFitModel.FK__Goals__id_Goals___797309D9" />
+        <AssociationConnector Association="MyFitModel.FK__Goals__id_Goals___7A672E12" />
+        <AssociationConnector Association="MyFitModel.FK__Goals__id_Goals___7B5B524B" />
+        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Lu__59FA5E80" />
+        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Sn__59063A47" />
+        <AssociationConnector Association="MyFitModel.FK__MealGoals__id_Sn__5AEE82B9" />
+        <AssociationConnector Association="MyFitModel.FK__Nutrition__id_Nu__5EBF139D" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

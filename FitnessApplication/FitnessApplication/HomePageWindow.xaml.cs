@@ -22,6 +22,7 @@ namespace FitnessApplication
         public HomePageWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void Friends_Click(object sender, RoutedEventArgs e)
@@ -31,11 +32,26 @@ namespace FitnessApplication
             this.Close();
         }
 
-        private void Food_Click(object sender, RoutedEventArgs e)
+        private void DiaryFood_Click(object sender, RoutedEventArgs e)
         {
-            Recipes window = new Recipes();
-            window.Show();
 
+            DiaryFood Food = new DiaryFood();
+            Food.Show();
+            this.Close();
+        }
+
+        private void DiaryExercise_Click(object sender, RoutedEventArgs e)
+        {
+            DiaryExercise Exercise = new DiaryExercise();
+            Exercise.Show();
+            this.Close();
+        }
+
+        private void NutritionButton_Click(object sender, RoutedEventArgs e)
+        {
+            Nutrition N = new Nutrition();
+            N.Show();
+            this.Close();
         }
     }
 }

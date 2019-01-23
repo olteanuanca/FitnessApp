@@ -1,0 +1,30 @@
+﻿<Window x:Class="FitnessApplication.AddCardioExercise"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessApplication"
+        mc:Ignorable="d"
+        Title="AddCardioExercise" Height="360.444" Width="536.842" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="cardioViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Cardio}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource cardioViewSource}">
+        <Button x:Name="DataBaseButton" Content="Database" HorizontalAlignment="Left" Margin="85,39,0,0" VerticalAlignment="Top" Width="75" Opacity="0.5" RenderTransformOrigin="0.465,-0.443"/>
+        <Button Name="MyCarioButton" Content="My Cardio Exercises" HorizontalAlignment="Left" Margin="286,39,0,0" VerticalAlignment="Top" Width="113" Click="MyCardioButton_Click" />
+        <DataGrid x:Name="cardioDataGrid" SelectionChanged="cardioDataGrid_SelectionChanged" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="85,84,55.4,143.2" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="cardio_DescriptionColumn" Binding="{Binding Cardio_Description}" Header="Cardio Description" Width="150"/>
+                <DataGridTextColumn x:Name="calories_burnedColumn" Binding="{Binding Calories_burned}" Header="Calories burned" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="duration_minColumn" Binding="{Binding Duration_min}" Header="Duration min" Width="SizeToHeader"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="SelectedBox" HorizontalAlignment="Left" Height="23" Margin="226,212,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" Width="206"/>
+        <TextBlock HorizontalAlignment="Left" Margin="121,212,0,0" TextWrapping="Wrap" Text="Selected Exercise:" VerticalAlignment="Top" Height="23" Width="101"/>
+        <TextBlock HorizontalAlignment="Left" Margin="121,253,0,0" TextWrapping="Wrap" Text="Duration(min):" VerticalAlignment="Top" Width="97"/>
+        <TextBox x:Name="DurationBox" HorizontalAlignment="Left" Height="23" Margin="226,252,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="127"/>
+        <Button x:Name="AddButton" Content="Add to Diary" HorizontalAlignment="Left" Margin="184,291,0,0" VerticalAlignment="Top" Width="106" Click="AddButton_Click"/>
+
+    </Grid>
+</Window>

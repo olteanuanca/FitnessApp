@@ -42,9 +42,33 @@ namespace FitnessApplication {
     public partial class HomePageWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 11 "..\..\HomePageWindow.xaml"
+        #line 12 "..\..\HomePageWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button DiaryExercise;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 14 "..\..\HomePageWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button Friends;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 23 "..\..\HomePageWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button DiaryFood;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 24 "..\..\HomePageWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button NutritionButton;
         
         #line default
         #line hidden
@@ -88,10 +112,37 @@ namespace FitnessApplication {
             switch (connectionId)
             {
             case 1:
+            this.DiaryExercise = ((System.Windows.Controls.Button)(target));
+            
+            #line 12 "..\..\HomePageWindow.xaml"
+            this.DiaryExercise.Click += new System.Windows.RoutedEventHandler(this.DiaryExercise_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 2:
             this.Friends = ((System.Windows.Controls.Button)(target));
             
-            #line 11 "..\..\HomePageWindow.xaml"
+            #line 14 "..\..\HomePageWindow.xaml"
             this.Friends.Click += new System.Windows.RoutedEventHandler(this.Friends_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 3:
+            this.DiaryFood = ((System.Windows.Controls.Button)(target));
+            
+            #line 23 "..\..\HomePageWindow.xaml"
+            this.DiaryFood.Click += new System.Windows.RoutedEventHandler(this.DiaryFood_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 4:
+            this.NutritionButton = ((System.Windows.Controls.Button)(target));
+            
+            #line 24 "..\..\HomePageWindow.xaml"
+            this.NutritionButton.Click += new System.Windows.RoutedEventHandler(this.NutritionButton_Click);
             
             #line default
             #line hidden

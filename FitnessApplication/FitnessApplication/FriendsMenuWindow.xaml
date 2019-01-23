@@ -34,7 +34,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/SeeFriendsLogo.jpg"/>
+                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/FriendsLogo.jpeg"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -54,7 +54,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/PlusLogo.png"/>
+                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/PlusLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -74,7 +74,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/MessageLogo.png"/>
+                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/MessageLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
@@ -94,7 +94,7 @@
             <Button.Background>
                 <ImageBrush>
                     <ImageBrush.ImageSource>
-                        <BitmapImage UriSource="file:///D:/Work 3/RepoFitnessApp/RequestLogo.png"/>
+                        <BitmapImage UriSource="file:///C:\Users\Diana\source\repos\FitnessApp/RequestLogo.png"/>
                     </ImageBrush.ImageSource>
                 </ImageBrush>
             </Button.Background>
